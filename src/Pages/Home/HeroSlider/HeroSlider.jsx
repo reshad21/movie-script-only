@@ -39,16 +39,24 @@ const HeroSlider = () => {
 
             <p className='my-8'>Total length: {sliders.length}</p>
 
-            <div>
-                <Slide className="slide-container">
-                    {sliders.map((slider, index) => (
-                        <div className="each-slide" key={index}>
-                            <div >
-                                <span>{slider.title}</span>
-                                <img src={slider.thumbnailUrl} alt="" />
-                            </div>
-                        </div>
-                    ))}
+            <div className='my-2 bg-slate-500 px-4 py-4'>
+                <Slide className="slide-container flex gap-4">
+                    {
+                        sliders?.map((slider, index) => {
+                            return (
+                                <div key={index}>
+                                    <div className='bg-white px-12 w-[400px]'>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed beatae laborum quo aut non repellendus, sapiente facilis cupiditate quis ad, voluptates consectetur vero dolor quae ab, inventore delectus ex temporibus.</p>
+                                        <button className='btn btn-outline'>Click me</button>
+                                    </div>
+
+                                </div>
+                            )
+                        })
+                    }
+
+
+
                 </Slide>
             </div>
 
