@@ -17,16 +17,16 @@ const HeroSlider = () => {
     //         })
     // }, [])
 
-    const { data: sliders = [], isloading } = useQuery({
+    const { data: sliders = [], isLoading } = useQuery({
         queryKey: ['sliders'],
         queryFn: async () => {
-            const res = await fetch('https://jsonplaceholder.typicode.com/photos');
+            const res = await fetch('https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=60328c60edaea9ec7115178b6e8c7a3a');
             const data = await res.json();
-            return data;
+            return data.results;
         }
     })
 
-    if (isloading) {
+    if (isLoading) {
         return (
             <div className='bg-white flex items-end justify-center h-[200px]'>
                 <h1 className='text-2xl font-semibold text-slate-600'>Loading...</h1>
@@ -37,7 +37,7 @@ const HeroSlider = () => {
     return (
         <div>
 
-            <p className='my-8'>Total length: {sliders.length}</p>
+            <p className='my-8'>Total length: {sliders?.length}</p>
 
             <div className='my-2 bg-slate-500 px-4 py-4'>
                 <Slide className="slide-container flex gap-4">
