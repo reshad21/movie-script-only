@@ -46,7 +46,11 @@ const HeroSlider = () => {
                             return (
                                 <div key={index}>
                                     <div className='bg-white px-12 w-[400px]'>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed beatae laborum quo aut non repellendus, sapiente facilis cupiditate quis ad, voluptates consectetur vero dolor quae ab, inventore delectus ex temporibus.</p>
+                                        <div className="w-full">
+                                            <img src={slider?.poster_path} alt="" className='w-full object-cover' />
+                                        </div>
+                                        <h2 className='font-bold py-2'>{slider?.original_title}</h2>
+                                        <p>{slider?.overview}</p>
                                         <button className='btn btn-outline'>Click me</button>
                                     </div>
 
@@ -54,10 +58,28 @@ const HeroSlider = () => {
                             )
                         })
                     }
-
-
-
                 </Slide>
+            </div>
+
+
+            <div className="grid gap-10 lg:grid-cols-5 justify-center items-center">
+                {
+                    sliders?.map((slider, index) => {
+                        return (
+                            <div key={index}>
+                                <div className='bg-white p-2 border-2 border-black'>
+                                    <div className="w-full">
+                                        <img src={slider?.backdrop_path} alt="" className='w-full object-cover' />
+                                    </div>
+                                    <h2 className='font-bold py-2'>{slider?.original_title}</h2>
+                                    <p>{slider?.overview}</p>
+                                    <button className='btn btn-outline'>Click me</button>
+                                </div>
+
+                            </div>
+                        )
+                    })
+                }
             </div>
 
 
