@@ -17,10 +17,14 @@ const HeroSlider = () => {
     //         })
     // }, [])
 
+
+    const API_KEY = '60328c60edaea9ec7115178b6e8c7a3a';
+
+
     const { data: sliders = [], isLoading } = useQuery({
         queryKey: ['sliders'],
         queryFn: async () => {
-            const res = await fetch('https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=60328c60edaea9ec7115178b6e8c7a3a');
+            const res = await fetch(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}`);
             const data = await res.json();
             return data.results;
         }
@@ -33,6 +37,11 @@ const HeroSlider = () => {
             </div>
         )
     }
+
+
+    const imgUrl = 'https://image.tmdb.org/t/p/w500';
+
+
 
     return (
         <div>
@@ -69,13 +78,12 @@ const HeroSlider = () => {
                             <div key={index}>
                                 <div className='bg-white p-2 border-2 border-black'>
                                     <div className="w-full">
-                                        <img src={slider?.backdrop_path} alt="" className='w-full object-cover' />
+                                        <img src={imgUrl + slider?.backdrop_path} alt="" className='w-full object-cover' />
                                     </div>
                                     <h2 className='font-bold py-2'>{slider?.original_title}</h2>
                                     <p>{slider?.overview}</p>
                                     <button className='btn btn-outline'>Click me</button>
                                 </div>
-
                             </div>
                         )
                     })
