@@ -22,7 +22,7 @@ const Navber = () => {
                     </div>
                 </div>
                 <div className="navbar-center">
-                    <a href='/' className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a href='/' className="btn btn-ghost normal-case text-xl">MOVIEFLIX</a>
                 </div>
                 <div className="navbar-end">
                     <button className="btn btn-ghost btn-circle">
