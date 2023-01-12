@@ -74,7 +74,7 @@ const HeroSlider = () => {
                     sliders?.map((slider, index) => {
                         return (
                             <div key={index}>
-                                <div className="card bg-base-100 shadow-xl border-2 border-green-500">
+                                <div className="card shadow-xl border-2 border-green-500">
                                     <figure><img src={imgUrl + slider?.backdrop_path} alt="Shoes" className='w-full' /></figure>
                                     <div className="card-body">
                                         <h2 className="card-title text-xl">

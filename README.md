@@ -1,3 +1,8 @@
+How to Create Dark Mood?
+1. Goto tailwind.config.js file and the write (darkMode: "class",) tother wish goto tailwind darkmood enable page for guidelink
+2. Then write the same code where i write the code on Navber.jsx file
+3. Which place you want to show this feature you must be create a variant example: you wnat to only header then you write dark:bg-black(its put on the className attribute). put this everywhere in the application so that it look like an dark mood application
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
