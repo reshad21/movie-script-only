@@ -30,7 +30,7 @@ const Navber = () => {
     </>
     return (
         <div>
-            <div className="navbar bg-base-100 dark:bg-black">
+            <div className="navbar bg-base-100 dark:bg-[#282d36] dark:text-white fixed top-0 z-30 w-full lg:px-[60px] md:px-[30px] backdrop-blur">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -56,7 +56,7 @@ const Navber = () => {
                             <span className="badge badge-xs badge-primary indicator-item"></span>
                         </div>
                     </button>
-                    <button className='btn btn-outline btn-sm' onClick={handleThemeSwitch}>Mode</button>
+                    <button className='btn btn-outline btn-sm dark:bg-[#3d4451] dark:text-white' onClick={handleThemeSwitch}>Mode</button>
                 </div>
             </div>
         </div>

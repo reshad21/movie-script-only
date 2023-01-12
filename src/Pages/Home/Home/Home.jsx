@@ -3,7 +3,7 @@ import HeroSlider from '../HeroSlider/HeroSlider';
 
 const Home = () => {
     return (
-        <div className='max-w-screen-xl mx-auto dark:bg-black '>
+        <div className='px-24 mt-12 dark:bg-[#3d4451] dark:text-white'>
             <HeroSlider></HeroSlider>
         </div>
     );
