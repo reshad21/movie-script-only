@@ -43,7 +43,7 @@ const HeroSlider = () => {
     return (
         <div>
             <div className="flex">
-                <h1 className='my-8 font-bold text-2xl border-2 border-green-500 inline-block rounded p-2'>MOST TRENDING MOVIES: {sliders?.length}</h1>
+                <h1 className='my-8 font-bold text-2xl border-2 border-green-500 inline-block rounded p-2'>MOST TRENDING MOVIES: <span className='text-green-500'>{sliders?.length}</span></h1>
             </div>
 
             {/* <div className='my-2 bg-slate-500 px-4 py-4'>

@@ -30,7 +30,7 @@ const Navber = () => {
     </>
     return (
         <div>
-            <div className="navbar bg-base-100 dark:bg-[#282d36] dark:text-white fixed top-0 z-30 w-full lg:px-[60px] md:px-[30px] backdrop-blur">
+            <div className="navbar bg-base-100 dark:bg-[#2f3541] dark:text-white fixed top-0 z-30 w-full lg:px-[60px] md:px-[30px] backdrop-blur">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost btn-circle">
