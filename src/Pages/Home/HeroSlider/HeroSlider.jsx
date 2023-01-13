@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'react-slideshow-image/dist/styles.css';
+import download from '../../../assets/2.png';
 import './HeroSlider.css';
-
-
 const HeroSlider = () => {
     // const [sliders, setSlider] = useState([]);
 
@@ -75,7 +75,15 @@ const HeroSlider = () => {
                         return (
                             <div key={index}>
                                 <div className="card shadow-xl border-2 border-green-500">
-                                    <figure><img src={imgUrl + slider?.backdrop_path} alt="Shoes" className='w-full' /></figure>
+                                    <div className='relative'>
+                                        <figure className='rounded-t-[12px] ml-[-1px]'>
+                                            <img src={imgUrl + slider?.backdrop_path} alt="Shoes" className='w-full brightness-50' />
+                                        </figure>
+                                        <Link to='/'>
+                                            <img src={download} alt="download" className='absolute w-1/4 h-[40%] z-20 top-[40px] left-1/2 translate-x-[-50%]' />
+                                        </Link>
+                                    </div>
+
                                     <div className="card-body">
                                         <h2 className="card-title text-xl">
                                             {slider?.original_title}
