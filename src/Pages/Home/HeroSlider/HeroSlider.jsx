@@ -79,7 +79,7 @@ const HeroSlider = () => {
                                         <figure className='rounded-t-[12px] ml-[-1px]'>
                                             <img src={imgUrl + slider?.backdrop_path} alt="Shoes" className='w-full brightness-50' />
                                         </figure>
-                                        <Link to='/'>
+                                        <Link to={`/movie/${slider?.id}`}>
                                             <img src={download} alt="download" className='absolute w-1/4 h-[40%] z-20 top-[40px] left-1/2 translate-x-[-50%]' />
                                         </Link>
                                     </div>
