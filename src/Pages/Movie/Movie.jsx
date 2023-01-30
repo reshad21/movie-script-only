@@ -1,6 +1,29 @@
+import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 const Movie = () => {
+
+    const API_KEY = '60328c60edaea9ec7115178b6e8c7a3a';
+    const { id } = useParams();
+    const { data: movie = [], isLoading } = useQuery({
+        queryKey: ['movie', id],
+        queryFn: async () => {
+            const res = await fetch(`https://api.themoviedb.org/3/discover/movie/${id}?api_key=${API_KEY}`);
+            const data = await res.json();
+            return data;
+        }
+    })
+    console.log(movie);
+
+    if (isLoading) {
+        return (
+            <div className='bg-white flex items-end justify-center h-[200px]'>
+                <h1 className='text-2xl font-semibold text-slate-600'>Loading...</h1>
+            </div>
+        )
+    }
+
     return (
         <div className='lg:px-24 md:px-4 px-2 py-2 mt-12 dark:bg-[#3d4451] dark:text-white'>
             <div className="card card-side bg-base-100 shadow-xl">
