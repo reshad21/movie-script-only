@@ -30,22 +30,23 @@ const HeroSlider = () => {
     //     .then(data => console.log(data))
     //     .catch(err => console.error(err));
 
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '52f6ae52d6mshd0444edb79c678bp195a94jsn8b52b2c677d8',
-            'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
-        }
-    };
+    // const options = {
+    //     method: 'GET',
+    //     headers: {
+    //         'X-RapidAPI-Key': '52f6ae52d6mshd0444edb79c678bp195a94jsn8b52b2c677d8',
+    //         'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
+    //     }
+    // };
 
-    fetch('https://imdb8.p.rapidapi.com/auto-complete?q=game%20of%20thr', options)
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(err => console.error(err));
+    // fetch('https://imdb8.p.rapidapi.com/auto-complete?q=game%20of%20thr', options)
+    //     .then(response => response.json())
+    //     .then(data => console.log(data))
+    //     .catch(err => console.error(err));
+
+
 
 
     const API_KEY = '60328c60edaea9ec7115178b6e8c7a3a';
-
     const { data: sliders = [], isLoading } = useQuery({
         queryKey: ['sliders'],
         queryFn: async () => {

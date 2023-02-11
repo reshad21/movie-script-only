@@ -9,11 +9,12 @@ const Movie = () => {
     const { data: movie = [], isLoading } = useQuery({
         queryKey: ['movie', id],
         queryFn: async () => {
-            const res = await fetch(`https://api.themoviedb.org/3/discover/movie/${id}?api_key=${API_KEY}`);
+            const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`);
             const data = await res.json();
             return data;
         }
     })
+
     console.log(movie);
 
     if (isLoading) {
