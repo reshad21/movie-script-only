@@ -1,13 +1,14 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import './Movie.css';
 
 const Movie = () => {
 
     const API_KEY = '60328c60edaea9ec7115178b6e8c7a3a';
     const { id } = useParams();
-    const { data: movie = [], isLoading } = useQuery({
-        queryKey: ['movie', id],
+    const { data: currentMovieDetail = [], isLoading } = useQuery({
+        queryKey: ['currentMovieDetail', id],
         queryFn: async () => {
             const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`);
             const data = await res.json();
@@ -15,7 +16,13 @@ const Movie = () => {
         }
     })
 
-    console.log(movie);
+    // console.log(currentMovieDetail);
+
+    const imgUrl = 'https://image.tmdb.org/t/p/w500';
+
+    const bannerImage = imgUrl + currentMovieDetail?.backdrop_path;
+    const posterImage = imgUrl + currentMovieDetail?.poster_path;
+    console.log(posterImage);
 
     if (isLoading) {
         return (
@@ -26,17 +33,50 @@ const Movie = () => {
     }
 
     return (
-        <div className='lg:px-24 md:px-4 px-2 py-2 mt-12 dark:bg-[#3d4451] dark:text-white'>
-            <div className="card card-side bg-base-100 shadow-xl">
-                <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">New movie is released!</h2>
-                    <p>Click the button to watch on Jetflix app.</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Watch</button>
+        <div className='lg:px-24 md:px-4 px-2 py-20 mt-12 dark:bg-[#3d4451] dark:text-white movie'>
+
+            <div className="movie__intro">
+                <img className="movie__backdrop" src={posterImage} alt='' />
+            </div>
+            <div className="movie__detail">
+                <div className="movie__detailLeft">
+                    <div className="movie__posterBox">
+                        <img className="movie__poster" src={bannerImage} alt='' />
+                    </div>
+                </div>
+
+                <div className="movie__detailRight">
+                    <div className="movie__detailRightTop">
+                        <div className="movie__name">{currentMovieDetail ? currentMovieDetail.original_title : ""}</div>
+                        <div className="movie__tagline">{currentMovieDetail ? currentMovieDetail.tagline : ""}</div>
+                        <div className="movie__rating">
+                            {currentMovieDetail ? currentMovieDetail.vote_average : ""} <i class="fas fa-star" />
+                            <span className="movie__voteCount">{currentMovieDetail ? "(" + currentMovieDetail.vote_count + ") votes" : ""}</span>
+                        </div>
+                        <div className="movie__runtime">{currentMovieDetail ? currentMovieDetail.runtime + " mins" : ""}</div>
+                        <div className="movie__releaseDate">{currentMovieDetail ? "Release date: " + currentMovieDetail.release_date : ""}</div>
+                        <div className="movie__genres">
+                            {
+                                currentMovieDetail && currentMovieDetail.genres
+                                    ?
+                                    currentMovieDetail.genres.map(genre => (
+                                        <><span className="movie__genre" id={genre.id}>{genre.name}</span></>
+                                    ))
+                                    :
+                                    ""
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div className="movie__detailRightBottom">
+                <div className="synopsisText">Synopsis</div>
+                <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div>
+            </div>
+
+
+
         </div>
     );
 };
