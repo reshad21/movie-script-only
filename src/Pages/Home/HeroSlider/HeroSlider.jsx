@@ -1,6 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import 'react-slideshow-image/dist/styles.css';
+import { FreeMode } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import './HeroSlider.css';
 import Popular from './Popular/Popular';
 const HeroSlider = () => {
@@ -31,11 +35,49 @@ const HeroSlider = () => {
                 <h1 className='my-8 font-bold text-2xl border-2 border-green-500 inline-block rounded p-2'>MOST TRENDING MOVIES: <span className='text-green-500'>{populars?.length}</span></h1>
             </div>
 
-            <div className="grid gap-10 px-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 md:px-4 md:gap-5 ">
+            <Swiper
+                freeMode={true}
+                grabCursor={true}
+                modules={[FreeMode]}
+                className="mySwiper"
+                spaceBetween={20}
+                slidesPerView={5}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+                breakpoints={{
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    },
+                    480: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 15,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 15,
+                    },
+                    1280: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                    },
+                }}
+            >
                 {
-                    populars?.map((popular) => <Popular popular={popular} key={popular.id}></Popular>)
+
+
+                    populars.map((popular) => <SwiperSlide> <Popular popular={popular} key={popular.id}></Popular></SwiperSlide>)
+
+
                 }
-            </div>
+
+
+            </Swiper>
+
         </div>
     );
 };
