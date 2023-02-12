@@ -27,3 +27,36 @@
     width: 45%;
     text-align: left;
 }
+
+@media(max-width: 767px) {
+    .single__description {
+        position: absolute;
+        z-index: 999999999;
+        bottom: 35%;
+        left: 5%;
+        width: 75%;
+        text-align: left;
+    }
+}
+
+@media(max-width: 575px) {
+    .single__description {
+        position: absolute;
+        z-index: 999999999;
+        bottom: 25%;
+        left: 5%;
+        width: 75%;
+        text-align: left;
+    }
+}
+
+@media(max-width: 446px) {
+    .single__description {
+        position: absolute;
+        z-index: 999999999;
+        bottom: 25%;
+        left: 5%;
+        width: 80%;
+        text-align: left;
+    }
+}
