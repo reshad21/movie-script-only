@@ -1,14 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import 'react-slideshow-image/dist/styles.css';
-import download from '../../../assets/2.png';
 import './HeroSlider.css';
+import Popular from './Popular/Popular';
 const HeroSlider = () => {
 
     // const API_KEY = process.env.REACT_APP_apiKey;
-    const { data: sliders = [], isLoading } = useQuery({
-        queryKey: ['sliders'],
+    const { data: populars = [], isLoading } = useQuery({
+        queryKey: ['populars'],
         queryFn: async () => {
             const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=60328c60edaea9ec7115178b6e8c7a3a`);
             const data = await res.json();
@@ -16,7 +15,7 @@ const HeroSlider = () => {
         }
     })
 
-    // console.log(sliders);
+    // console.log(populars);
 
     if (isLoading) {
         return (
@@ -26,58 +25,17 @@ const HeroSlider = () => {
         )
     }
 
-    const imgUrl = 'https://image.tmdb.org/t/p/w500';
-
     return (
         <div>
             <div className="flex">
-                <h1 className='my-8 font-bold text-2xl border-2 border-green-500 inline-block rounded p-2'>MOST TRENDING MOVIES: <span className='text-green-500'>{sliders?.length}</span></h1>
+                <h1 className='my-8 font-bold text-2xl border-2 border-green-500 inline-block rounded p-2'>MOST TRENDING MOVIES: <span className='text-green-500'>{populars?.length}</span></h1>
             </div>
+
             <div className="grid gap-10 px-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 md:px-4 md:gap-5 ">
                 {
-                    sliders?.map((slider, index) => {
-                        return (
-                            <div key={index}>
-                                <div className="card shadow-xl border-2 border-green-500">
-                                    <div className='relative'>
-                                        <figure className='rounded-t-[12px] ml-[-1px]'>
-                                            <img src={imgUrl + slider?.backdrop_path} alt="Shoes" className='w-full brightness-50' />
-                                        </figure>
-                                        <Link to={`/movie/${slider?.id}`}>
-                                            <img src={download} alt="download" className='absolute w-1/4 h-[40%] z-20 top-[40px] left-1/2 translate-x-[-50%]' />
-                                        </Link>
-                                    </div>
-
-                                    <div className="card-body">
-                                        <h2 className="card-title text-xl">
-                                            {slider?.original_title}
-                                        </h2>
-                                        <p>
-                                            {
-                                                (slider?.overview.length > 120)
-                                                    ?
-                                                    <>{slider?.overview.slice(0, 120)} ...</>
-                                                    :
-                                                    slider?.overview
-                                            }
-                                        </p>
-                                        <div className="card-actions justify-end">
-                                            <div className="badge badge-outline">Fashion</div>
-                                            <div className="badge badge-outline">Products</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        )
-                    })
+                    populars?.map((popular) => <Popular popular={popular} key={popular.id}></Popular>)
                 }
             </div>
-
-
-
-
-
         </div>
     );
 };
