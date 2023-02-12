@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navber = () => {
     const [theme, setTheme] = useState("");
@@ -44,7 +45,7 @@ const Navber = () => {
                     </div>
                 </div>
                 <div className="navbar-center">
-                    <a href='/' className="btn btn-ghost normal-case text-xl">MOVIEFLIX</a>
+                    <Link to='/' className="btn btn-ghost normal-case text-xl">MOVIEFLIX</Link>
                 </div>
                 <div className="navbar-end">
                     <button className="btn btn-ghost btn-circle">
