@@ -20,7 +20,7 @@ const HeroSlider = () => {
         }
     })
 
-    // console.log(populars);
+    console.log(populars);
 
     if (isLoading) {
         return (

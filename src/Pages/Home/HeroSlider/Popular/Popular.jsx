@@ -24,7 +24,7 @@ const Popular = ({ popular }) => {
                         <div className="info p-3 absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition text-slate-200">
                             <span>Rating: {popular?.vote_average}</span>
                             <p>popularity: {popular?.popularity}</p>
-                            <p>First Air Date: {popular?.first_air_date}</p>
+                            <p>Release Date: {popular?.release_date}</p>
                         </div>
                     </Link>
 

@@ -15,7 +15,7 @@ const TodayAringShow = () => {
         }
     })
 
-    console.log(todayShows);
+    // console.log(todayShows);
 
     if (isLoading) {
         return (
