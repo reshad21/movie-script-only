@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { FaAngleDoubleRight } from 'react-icons/fa';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Comming from './Comming/Comming';
-
 const Upcoming = () => {
     // const API_KEY = process.env.REACT_APP_apiKey;
     const { data: upcomings = [], isLoading } = useQuery({
@@ -26,7 +26,10 @@ const Upcoming = () => {
     }
     return (
         <div>
-            <h1 className='my-4 text-2xl inline-block rounded p-2'>Upcoming Movies <span className='text-green-500'></span></h1>
+            <div className="title flex items-center gap-1 align-middle">
+                <h1 className='my-4 text-2xl inline-block rounded p-2'>Upcoming Movies</h1>
+                <span className='text-green-500 inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
+            </div>
 
             <Swiper
                 spaceBetween={20}
