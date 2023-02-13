@@ -1,4 +1,5 @@
 import React from 'react';
+import DIvider from '../DIvider/DIvider';
 import HeroSlider from '../HeroSlider/HeroSlider';
 import HomeSlider from '../HomeSlider/HomeSlider';
 import TopRated from '../TopRated/TopRated';
@@ -11,6 +12,7 @@ const Home = () => {
             <HeroSlider></HeroSlider>
             <Upcoming></Upcoming>
             <TopRated></TopRated>
+            <DIvider></DIvider>
         </div>
     );
 };
