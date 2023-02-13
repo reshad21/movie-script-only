@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroSlider from '../HeroSlider/HeroSlider';
 import HomeSlider from '../HomeSlider/HomeSlider';
+import TopRated from '../TopRated/TopRated';
 import Upcoming from '../Upcoming/Upcoming';
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
             <HomeSlider></HomeSlider>
             <HeroSlider></HeroSlider>
             <Upcoming></Upcoming>
+            <TopRated></TopRated>
         </div>
     );
 };
