@@ -31,9 +31,9 @@ const HeroSlider = () => {
     }
 
     return (
-        <div>
+        <div className='mb-4'>
             <div className="title flex items-center gap-1 align-middle">
-                <h1 className='my-4 text-2xl inline-block rounded p-2'>Popular Movies</h1>
+                <h1 className='my-5 text-2xl inline-block rounded p-2'>Popular Movies</h1>
                 <span className='text-green-500 inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
             </div>
 

@@ -2,6 +2,8 @@ import React from 'react';
 import DIvider from '../DIvider/DIvider';
 import HeroSlider from '../HeroSlider/HeroSlider';
 import HomeSlider from '../HomeSlider/HomeSlider';
+import PopularTvShow from '../PopularTvShow/PopularTvShow';
+import TodayAringShow from '../TodayAringShow/TodayAringShow';
 import TopRated from '../TopRated/TopRated';
 import Upcoming from '../Upcoming/Upcoming';
 
@@ -13,6 +15,8 @@ const Home = () => {
             <Upcoming></Upcoming>
             <TopRated></TopRated>
             <DIvider></DIvider>
+            <PopularTvShow></PopularTvShow>
+            <TodayAringShow></TodayAringShow>
         </div>
     );
 };
