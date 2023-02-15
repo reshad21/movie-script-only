@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import JwPlayer from './JwPlayer';
 import './Movie.css';
 
 const Movie = () => {
@@ -70,10 +71,7 @@ const Movie = () => {
                 </div>
             </div>
 
-            <div className="movie__detailRightBottom">
-                <div className="synopsisText">Synopsis</div>
-                <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div>
-            </div>
+            <JwPlayer currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage}></JwPlayer>
 
 
 

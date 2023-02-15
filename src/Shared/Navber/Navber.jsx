@@ -6,10 +6,12 @@ const Navber = () => {
 
     useEffect(() => {
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setTheme('dark');
+            // setTheme('dark');
+            setTheme('light');
         }
         else {
-            setTheme('light');
+            // setTheme('light');
+            setTheme('dark');
         }
     }, [])
 
