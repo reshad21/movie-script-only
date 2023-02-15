@@ -1,12 +1,15 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
-import { FaAngleDoubleRight } from 'react-icons/fa';
-import 'swiper/css';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useRef } from 'react';
+import { FaAngleDoubleRight, FaRegCaretSquareLeft, FaRegCaretSquareRight } from 'react-icons/fa';
 import Rated from './Rated';
 
-const TopRated = () => {
+import { Navigation } from "swiper";
+import 'swiper/css';
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+const TopRated = () => {
+    const swiperRef = useRef();
     // const API_KEY = process.env.REACT_APP_apiKey;
     const { data: toprateds = [], isLoading } = useQuery({
         queryKey: ['toprateds'],
@@ -27,12 +30,18 @@ const TopRated = () => {
         )
     }
     return (
-        <div>
+        <div className='relative'>
             <div className="title flex items-center gap-1 align-middle">
                 <h1 className='my-4 text-2xl inline-block rounded p-2 text-slate-200'>Toprated Movies</h1>
                 <span className='text-green-500 inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
             </div>
             <Swiper
+                modules={[Navigation]}
+                // navigation={true}
+                // style={{ marginLeft: '40px', marginRight: '40px', position: 'unset' }}
+                onBeforeInit={(swiper) => {
+                    swiperRef.current = swiper;
+                }}
                 spaceBetween={20}
                 slidesPerView={5}
                 breakpoints={{
@@ -62,7 +71,10 @@ const TopRated = () => {
                     toprateds?.map(toprated => <SwiperSlide><Rated toprated={toprated} key={toprated.id}></Rated></SwiperSlide>)
                 }
             </Swiper>
-
+            <div className='customize__navigation absolute top-7 right-3 text-3xl font-light text-slate-300'>
+                <button onClick={() => swiperRef.current?.slidePrev()}><FaRegCaretSquareLeft /></button>
+                <button onClick={() => swiperRef.current?.slideNext()}><FaRegCaretSquareRight /></button>
+            </div>
 
         </div>
     );
