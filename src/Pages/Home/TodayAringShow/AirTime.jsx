@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import download from '../../../assets/play-removebg-preview.png';
 // import defaultImage from '../../../assets/watchtvseriesfeat.jpg';
@@ -24,6 +25,7 @@ const AirTime = ({ todayShow }) => {
                             <span>Rating: {todayShow?.vote_average}</span>
                             <p>popularity: {todayShow?.popularity}</p>
                             <p>First Air Date: {todayShow?.first_air_date}</p>
+                            <FaYoutube className='inline-block text-7xl ml-20 mt-9 text-rose-500' />
                         </div>
                     </Link>
 

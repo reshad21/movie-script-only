@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Popular.css';
 
+import { FaStar, FaYoutube } from 'react-icons/fa';
 import download from '../../../../assets/play-removebg-preview.png';
 const Popular = ({ popular }) => {
     // const imgUrl = 'https://image.tmdb.org/t/p/w500';
@@ -22,9 +23,10 @@ const Popular = ({ popular }) => {
 
                     <Link to={`/movie/${popular?.id}`}>
                         <div className="info p-3 absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition text-slate-200">
-                            <span>Rating: {popular?.vote_average}</span>
+                            <span>Rating: {popular?.vote_average} <FaStar className='star inline-block' /></span>
                             <p>popularity: {popular?.popularity}</p>
                             <p>Release Date: {popular?.release_date}</p>
+                            <FaYoutube className='inline-block text-7xl ml-20 mt-9 text-rose-500' />
                         </div>
                     </Link>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import download from '../../../assets/play-removebg-preview.png';
 
@@ -23,6 +24,7 @@ const TopRated = ({ topShow }) => {
                             <span>Rating: {topShow?.vote_average}</span>
                             <p>popularity: {topShow?.popularity}</p>
                             <p>First Air Date: {topShow?.first_air_date}</p>
+                            <FaYoutube className='inline-block text-7xl ml-20 mt-9 text-rose-500' />
                         </div>
                     </Link>
 
