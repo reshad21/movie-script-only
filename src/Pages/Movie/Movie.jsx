@@ -36,9 +36,9 @@ const Movie = () => {
     return (
         <div className='lg:px-24 md:px-4 px-2 py-20 mt-12 dark:bg-[#3d4451] dark:text-white movie'>
             <JwPlayer currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage}></JwPlayer>
-            <div className="action__btn my-4">
-                <button>Watch now</button>
-                <button>Download now</button>
+            <div className="action__btn my-5">
+                <button className='btn btn-success mx-2'>Watch now</button>
+                <button className='btn btn-success'>Download now</button>
             </div>
         </div>
     );
