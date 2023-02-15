@@ -20,7 +20,7 @@ const Populers = () => {
         }
     })
 
-    console.log(populars);
+    // console.log(populars);
 
     if (isLoading) {
         return (
