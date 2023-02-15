@@ -1,7 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { FaTv } from 'react-icons/fa';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from 'react-router-dom';
 import './HomeSlider.css';
 const HomeSlider = () => {
     const { data: populars = [], isLoading } = useQuery({
@@ -35,14 +37,17 @@ const HomeSlider = () => {
                 {
                     populars?.map(popular => {
                         return (
-                            <div className='single__item' key={popular?.id}>
+                            <div className='single__item text-slate-400' key={popular?.id}>
                                 <img src={imgUrl + popular?.poster_path} alt="" />
                                 <div className="single__description">
-                                    <h2 className='font-semibold text-3xl'>{popular?.original_title}</h2>
+                                    <h2 className='font-semibold text-3xl text-slate-200'>{popular?.original_title}</h2>
                                     <p>{popular?.overview}</p>
                                     <span>Rating: {popular?.vote_average}</span>
                                     <p>popularity:{popular?.popularity}</p>
-                                    <p>Release Date: {popular.release_date}</p>
+                                    <p className='pb-4'>Release Date: {popular.release_date}</p>
+                                    <div className="call_to_action">
+                                        <Link to='/'><button className='btn btn-success btn-outline border-[2px]'><FaTv className='' /> <span className='pl-2'>watch now</span></button></Link>
+                                    </div>
                                 </div>
                             </div>
                         )

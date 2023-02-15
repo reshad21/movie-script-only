@@ -27,7 +27,7 @@ const TodayAringShow = () => {
     return (
         <div>
             <div className="title flex items-center gap-1 align-middle">
-                <h1 className='my-4 text-2xl inline-block rounded p-2'>Today Aring Tv Show</h1>
+                <h1 className='my-4 text-2xl inline-block rounded p-2 text-slate-200'>Today Aring Tv Show</h1>
                 <span className='text-green-500 inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
             </div>
             <Swiper

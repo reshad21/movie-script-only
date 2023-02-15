@@ -5,6 +5,7 @@ import HomeSlider from '../HomeSlider/HomeSlider';
 import PopularTvShow from '../PopularTvShow/PopularTvShow';
 import TodayAringShow from '../TodayAringShow/TodayAringShow';
 import TopRated from '../TopRated/TopRated';
+import TopRatedShow from '../TopRatedShow/TopRatedShow';
 import Upcoming from '../Upcoming/Upcoming';
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <DIvider></DIvider>
             <PopularTvShow></PopularTvShow>
             <TodayAringShow></TodayAringShow>
+            <TopRatedShow></TopRatedShow>
         </div>
     );
 };
