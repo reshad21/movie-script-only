@@ -20,7 +20,7 @@ const PopularTvShow = () => {
         }
     })
 
-    console.log(tvShows);
+    // console.log(tvShows);
 
     if (isLoading) {
         return (

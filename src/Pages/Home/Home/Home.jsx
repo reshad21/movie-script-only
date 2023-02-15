@@ -1,6 +1,6 @@
 import React from 'react';
 import DIvider from '../DIvider/DIvider';
-import HeroSlider from '../HeroSlider/HeroSlider';
+import Populers from '../HeroSlider/Populers';
 import HomeSlider from '../HomeSlider/HomeSlider';
 import PopularTvShow from '../PopularTvShow/PopularTvShow';
 import TodayAringShow from '../TodayAringShow/TodayAringShow';
@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <div className='lg:px-24 md:px-4 px-2 py-7 mt-12 dark:bg-[#3d4451] dark:text-white'>
             <HomeSlider></HomeSlider>
-            <HeroSlider></HeroSlider>
+            <Populers></Populers>
             <Upcoming></Upcoming>
             <TopRated></TopRated>
             <DIvider></DIvider>
