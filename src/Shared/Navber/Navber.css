@@ -1,0 +1,35 @@
+.logo {
+    display: none;
+}
+
+@media(max-width: 1024px) {
+    .logo {
+        display: inline-block;
+    }
+}
+
+@media(max-width: 991px) {
+    .logo {
+        display: inline-block;
+    }
+}
+
+@media(max-width: 770px) {
+    .logo {
+        display: inline-block;
+    }
+}
+
+@media(max-width: 576px) {
+    .logo {
+        display: inline-block;
+    }
+}
+
+@media(max-width: 446px) {
+    .logo {
+        display: inline-block;
+    }
+}
+
+/* hidden md:inline sm:inline */
