@@ -16,11 +16,11 @@ const Comming = ({ upcoming }) => {
                                 :
                                 download
 
-                        } alt="Shoes" className='w-full brightness-50 h-[300px] object-cover' />
+                        } alt="Shoes" className='w-full h-[300px] object-cover' />
                     </figure>
 
                     <Link to={`/movie/${upcoming?.id}`}>
-                        <div className="info p-3 absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition text-slate-200">
+                        <div className="info p-3 absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition text-slate-200 bg-[#0000005b]">
                             <span>Rating: {upcoming?.vote_average} <FaStar className='star inline-block mb-1 text-yellow-600' /></span>
                             <p>popularity: {upcoming?.popularity}</p>
                             <p>Release Date: {upcoming?.release_date}</p>
@@ -30,7 +30,7 @@ const Comming = ({ upcoming }) => {
 
                 </div>
             </div>
-            <p className='pl-2 pt-1 font-extralight text-[14px] text-slate-300'>{upcoming?.original_title}</p>
+            <p className='pl-2 pt-1 font-extralight text-[14px] text-slate-600 dark:text-slate-200'>{upcoming?.original_title}</p>
         </div>
     );
 };

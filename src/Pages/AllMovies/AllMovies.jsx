@@ -25,7 +25,7 @@ const AllMovies = () => {
     return (
         <div className='lg:px-24 md:px-4 px-2 py-7 mt-12 dark:bg-[#3d4451] dark:text-white'>
             <div className="title flex items-center gap-1 align-middle">
-                <h1 className='my-5 text-2xl inline-block rounded p-2 text-slate-200'>Latest Movies</h1>
+                <h1 className='my-5 text-2xl inline-block rounded p-2 text-slate-600 dark:text-slate-200'>Latest Movies</h1>
                 <span className='text-green-500 inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-3 md:grid-cols-3 md:gap-3 sm:grid-cols-2 sm:gap-3">

@@ -32,7 +32,7 @@ const TodayAringShow = () => {
     return (
         <div className='relative'>
             <div className="title flex items-center gap-1 align-middle">
-                <h1 className='my-4 text-2xl inline-block rounded p-2 text-slate-200'>Today Aring Tv Show</h1>
+                <h1 className='my-4 text-2xl inline-block rounded p-2 text-slate-600 dark:text-slate-200'>Today Aring Tv Show</h1>
                 <span className='text-green-500 inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
             </div>
             <Swiper
@@ -72,7 +72,7 @@ const TodayAringShow = () => {
                     todayShows?.map(todayShow => <SwiperSlide><AirTime todayShow={todayShow} key={todayShow?.id}></AirTime></SwiperSlide>)
                 }
             </Swiper>
-            <div className='customize__navigation absolute top-7 right-3 text-3xl font-light text-slate-300'>
+            <div className='customize__navigation absolute top-7 right-3 text-3xl font-light text-slate-600 dark:text-slate-200'>
                 <button onClick={() => swiperRef.current?.slidePrev()}><FaRegCaretSquareLeft /></button>
                 <button onClick={() => swiperRef.current?.slideNext()}><FaRegCaretSquareRight /></button>
             </div>
