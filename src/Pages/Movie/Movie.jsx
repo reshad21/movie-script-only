@@ -21,7 +21,7 @@ const Movie = () => {
 
     const imgUrl = 'https://image.tmdb.org/t/p/w500';
 
-    const bannerImage = imgUrl + currentMovieDetail?.backdrop_path;
+    // const bannerImage = imgUrl + currentMovieDetail?.backdrop_path;
     const posterImage = imgUrl + currentMovieDetail?.poster_path;
     console.log(posterImage);
 
