@@ -19,7 +19,9 @@ const SearchItem = () => {
                 <div className="relative w-full">
                     <input
                         type="text"
-                        name='name' placeholder="Search..." className="input bg-inherit border border-slate-400 w-[192px] md:w-full sm:full"
+                        name='name'
+                        placeholder="Search..."
+                        className="input bg-slate-800 text-slate-200 border border-slate-400 w-[192px] md:w-full sm:full outline-none "
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)} />
 
