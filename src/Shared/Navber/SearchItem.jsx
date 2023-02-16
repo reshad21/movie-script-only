@@ -6,7 +6,7 @@ const SearchItem = () => {
 
 
     return (
-        <div className='m-0 p-0'>
+        <div className='m-0 p-0 '>
             <form className="block w-[100%]">
                 <div className="relative w-full">
                     <input type="text" name='name' placeholder="Search..." className="input bg-inherit border border-slate-400 w-[192px] md:w-full sm:full" />
