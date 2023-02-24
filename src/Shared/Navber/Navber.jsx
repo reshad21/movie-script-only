@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../../assets/logo.png';
 import './Navber.css';
 import SearchItem from './SearchItem';
 
@@ -36,6 +37,11 @@ const Navber = () => {
     const menuItems = <>
         <li>
             <Link className='p-0 mr-3 bg-inherit' to='/'>
+                <img src={Logo} alt="" className='w-[40px] h-[40px]' />
+            </Link>
+        </li>
+        <li>
+            <Link className='p-0 mr-3 bg-inherit' to='/'>
                 Home
             </Link>
         </li>
@@ -54,17 +60,17 @@ const Navber = () => {
         <div className="flex flex-col gap-1">
             <li>
                 <Link className='p-0 bg-inherit' to='/'>
-                    <button className='btn btn-outline w-full border-orange-500 font-bold text-orange-500'>Home</button>
+                    <button className='btn btn-outline w-full border-slate-200 font-bold text-slate-200'>Home</button>
                 </Link>
             </li>
             <li tabIndex={0} >
                 <Link className="p-0 justify-between bg-inherit" to='/allMovies'>
-                    <button className='btn btn-outline w-full border-orange-500 font-bold text-orange-500'>Movies</button>
+                    <button className='btn btn-outline w-full border-slate-200 font-bold text-slate-200'>Movies</button>
                 </Link>
             </li>
             <li>
                 <Link className='p-0 bg-inherit' to='/allTvShows'>
-                    <button className='btn btn-outline w-full border-orange-500 font-bold text-orange-500'>Tv Show</button>
+                    <button className='btn btn-outline w-full border-slate-200 font-bold text-slate-200'>Tv Show</button>
                 </Link>
             </li>
             <li>
@@ -84,7 +90,7 @@ const Navber = () => {
                             {menuItems}
                         </ul>
 
-                        <Link to='/' className='logo'><button className='btn btn-success btn-outline'>Home</button></Link>
+                        <Link to='/' className='logo'><img src={Logo} alt="" className='w-[64px] h-[48px]' /></Link>
 
                         <div className="dropdown">
                             <Link onClick={handleToggle} className="btn btn-ghost lg:hidden">
