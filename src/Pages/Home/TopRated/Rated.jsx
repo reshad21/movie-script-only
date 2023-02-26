@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaStar, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import download from '../../../assets/play-removebg-preview.png';
+import download from '../../../assets/download.png';
 
 const Rated = ({ toprated }) => {
     return (

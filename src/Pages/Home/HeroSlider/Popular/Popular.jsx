@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Popular.css';
 
 import { FaStar, FaYoutube } from 'react-icons/fa';
-import download from '../../../../assets/play-removebg-preview.png';
+import download from '../../../../assets/download.png';
 const Popular = ({ popular }) => {
     // const imgUrl = 'https://image.tmdb.org/t/p/w500';
     return (
