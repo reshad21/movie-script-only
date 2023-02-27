@@ -33,6 +33,7 @@ const HomeSlider = () => {
                 autoPlay={true}
                 infiniteLoop={true}
                 showStatus={false}
+                className="heroSlider"
             >
                 {
                     populars?.map(popular => {
@@ -40,8 +41,18 @@ const HomeSlider = () => {
                             <div className='single__item text-slate-400' key={popular?.id}>
                                 <img src={imgUrl + popular?.poster_path} alt="" />
                                 <div className="single__description">
-                                    <h2 className='font-semibold text-3xl text-slate-200'>{popular?.original_title}</h2>
-                                    <p>{popular?.overview}</p>
+                                    <h2 className='font-semibold lg:text-3xl md:text-xl text-slate-200'>{popular?.original_title}</h2>
+                                    <p>
+                                        {
+                                            (popular?.overview.length > 100)
+                                                ?
+                                                popular?.overview.slice(0, 100)
+                                                :
+                                                popular?.overview
+
+                                        }
+                                        ...
+                                    </p>
                                     <span>Rating: {popular?.vote_average}</span>
                                     <p>popularity:{popular?.popularity}</p>
                                     <p className='pb-4'>Release Date: {popular.release_date}</p>

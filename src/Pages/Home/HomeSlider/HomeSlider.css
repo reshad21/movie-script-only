@@ -32,10 +32,15 @@
     .single__description {
         position: absolute;
         z-index: 999999999;
-        bottom: 35%;
+        bottom: 59%;
         left: 5%;
         width: 75%;
         text-align: left;
+    }
+
+    .heroSlider {
+        height: 300px;
+        overflow: hidden;
     }
 }
 
@@ -43,18 +48,30 @@
     .single__description {
         position: absolute;
         z-index: 999999999;
-        bottom: 25%;
+        bottom: 59%;
         left: 5%;
         width: 75%;
         text-align: left;
     }
+
+    .heroSlider {
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .single__description p {
+        font-size: 13px;
+    }
+
+
+
 }
 
 @media(max-width: 446px) {
     .single__description {
         position: absolute;
         z-index: 999999999;
-        bottom: 25%;
+        bottom: 59%;
         left: 5%;
         width: 80%;
         text-align: left;
