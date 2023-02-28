@@ -50,15 +50,17 @@ const Populers = () => {
                 slidesPerView={5}
                 breakpoints={{
                     0: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
-                    480: {
                         slidesPerView: 2,
                         spaceBetween: 10,
                     },
-                    768: {
+                    480: {
                         slidesPerView: 3,
+                        spaceBetween: 10,
+                        slidesOffsetBefore: '220px',
+                        slidesOffsetAfter: '220px',
+                    },
+                    768: {
+                        slidesPerView: 5,
                         spaceBetween: 15,
                     },
                     1024: {
