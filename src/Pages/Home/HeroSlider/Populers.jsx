@@ -39,44 +39,36 @@ const Populers = () => {
 
             <Swiper
                 modules={[Navigation]}
-                // navigation={true}
-                // style={{ marginLeft: '40px', marginRight: '40px', position: 'unset' }}
                 onBeforeInit={(swiper) => {
                     swiperRef.current = swiper;
                 }}
 
-                className="mySwiper"
+                className="my-swiper"
                 spaceBetween={20}
                 slidesPerView={5}
                 breakpoints={{
                     0: {
                         slidesPerView: 2,
-                        spaceBetween: 10,
+                        spaceBetween: 5,
                     },
                     480: {
                         slidesPerView: 3,
                         spaceBetween: 10,
-                        slidesOffsetBefore: '220px',
-                        slidesOffsetAfter: '220px',
                     },
-                    768: {
-                        slidesPerView: 5,
+                    640: {
+                        slidesPerView: 3,
                         spaceBetween: 15,
                     },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 15,
-                    },
-                    1280: {
+                    1000: {
                         slidesPerView: 5,
-                        spaceBetween: 20,
+                        spaceBetween: 15,
                     },
                 }}
             >
                 {
 
 
-                    populars.map((popular) => <SwiperSlide> <Popular popular={popular} key={popular.id}></Popular></SwiperSlide>)
+                    populars.map((popular) => <SwiperSlide><Popular popular={popular} key={popular.id}></Popular></SwiperSlide>)
 
 
                 }
