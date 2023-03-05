@@ -37,7 +37,6 @@ const Upcoming = () => {
 
             <Swiper
                 modules={[Navigation]}
-                // navigation={true}
                 // style={{ marginLeft: '40px', marginRight: '40px', position: 'unset' }}
                 onBeforeInit={(swiper) => {
                     swiperRef.current = swiper;
@@ -46,24 +45,20 @@ const Upcoming = () => {
                 slidesPerView={5}
                 breakpoints={{
                     0: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
+                        slidesPerView: 2,
+                        spaceBetween: 5,
                     },
                     480: {
-                        slidesPerView: 2,
+                        slidesPerView: 3,
                         spaceBetween: 10,
                     },
-                    768: {
+                    640: {
                         slidesPerView: 3,
                         spaceBetween: 15,
                     },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 15,
-                    },
-                    1280: {
+                    1000: {
                         slidesPerView: 5,
-                        spaceBetween: 20,
+                        spaceBetween: 15,
                     },
                 }}
             >

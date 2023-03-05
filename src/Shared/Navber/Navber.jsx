@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FaBahai } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 import './Navber.css';
@@ -98,13 +99,13 @@ const Navber = () => {
                             </Link>
                             <ul className={toggle ? 'block absolute z-50 right-0 w-52 menu menu-compact mt-3 p-2 shadow bg-[#000000a6] rounded-box ' : 'hidden'}>
                                 {dropdownItems}
-                                <button className='btn btn-outline btn-sm dark:bg-[#3d4451] dark:text-white mt-2 py-2' onClick={handleThemeSwitch}>Mode</button>
+                                <FaBahai className='text-[#fff] dark:text-[#949393] mt-2 text-2xl cursor-pointer inline-block' onClick={handleThemeSwitch} />
                             </ul>
                         </div>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <SearchItem></SearchItem>
-                        <button className='btn btn-outline btn-sm dark:bg-[#3d4451] dark:text-white ml-2 py-2' onClick={handleThemeSwitch}>Mode</button>
+                        <FaBahai className='text-[#080808] dark:text-[#949393]  ml-2 text-2xl cursor-pointer inline-block' onClick={handleThemeSwitch} />
                     </div>
                 </div>
             </div>
