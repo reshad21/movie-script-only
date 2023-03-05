@@ -22,7 +22,7 @@ const SearchItem = () => {
                         type="text"
                         name='name'
                         placeholder="Search..."
-                        className="input text-slate-200 border border-slate-400 w-[192px] md:w-full sm:full outline-none bg-[#000]"
+                        className="input text-slate-800 dark:text-[#fdfdfd] border border-slate-400 w-[192px] md:w-full sm:full outline-none bg-[#fff] dark:bg-[#000]"
                         autoComplete="off"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)} />
