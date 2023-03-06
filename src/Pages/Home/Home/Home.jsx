@@ -1,4 +1,5 @@
 import React from 'react';
+import Addsterra from '../../Addsterra/Addsterra';
 import DIvider from '../DIvider/DIvider';
 import Populers from '../HeroSlider/Populers';
 import HomeSlider from '../HomeSlider/HomeSlider';
@@ -19,6 +20,7 @@ const Home = () => {
             <PopularTvShow></PopularTvShow>
             <TodayAringShow></TodayAringShow>
             <TopRatedShow></TopRatedShow>
+            <Addsterra></Addsterra>
         </div>
     );
 };
