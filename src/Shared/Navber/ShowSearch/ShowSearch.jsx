@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { FaStar, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import download from '../../../assets/download.png';
+// import download from '../../../assets/download.png';
+import banner from '../../../assets/banner.jpg';
 import { AuthContext } from '../../../Pages/Context/AuthProvider';
 const ShowSearch = () => {
 
@@ -23,7 +24,7 @@ const ShowSearch = () => {
                                                     ?
                                                     `https://image.tmdb.org/t/p/w500` + item?.backdrop_path
                                                     :
-                                                    download
+                                                    banner
 
                                             } alt="Shoes" className='w-full h-[300px] object-cover' />
                                         </figure>

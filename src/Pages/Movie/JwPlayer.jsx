@@ -1,6 +1,6 @@
 import React from 'react';
-import moviePoster from '../../assets/banner.jpg';
 import movieVideo from '../../assets/movie.mp4';
+import moviePoster from '../../assets/play.jpg';
 const JwPlayer = ({ currentMovieDetail }) => {
     console.log(currentMovieDetail);
 
@@ -18,7 +18,13 @@ const JwPlayer = ({ currentMovieDetail }) => {
                 preload="auto"
                 width="640"
                 height="264"
-                poster={bannerImage ? bannerImage : moviePoster}
+                poster={
+                    (bannerImage)
+                        ?
+                        bannerImage
+                        :
+                        moviePoster
+                }
                 data-setup="{}"
             >
                 <source src={movieVideo} type="video/mp4" />
