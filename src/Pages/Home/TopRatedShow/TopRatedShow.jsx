@@ -29,7 +29,7 @@ const TopRatedShow = () => {
         )
     }
     return (
-        <div className='mb-[100px] relative'>
+        <div className=' relative'>
             <div className="title flex items-center gap-1 align-middle">
                 <h1 className='my-4 text-2xl inline-block rounded p-2 text-slate-600 dark:text-slate-200'>Top Rated Tv Show</h1>
                 <span className='text-green-500 inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
