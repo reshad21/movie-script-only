@@ -2,7 +2,7 @@
   "name": "movie-website",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://everydaymovie.com/",
+  "homepage": "https://everydaymovie.com/",
   "dependencies": {
     "@tanstack/react-query": "^4.22.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -14,7 +14,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
-    "react-jw-player": "^1.19.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
