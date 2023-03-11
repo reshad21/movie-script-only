@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import Iframe from 'react-iframe';
 import { useParams } from 'react-router-dom';
 import JwPlayer from './JwPlayer';
 import './Movie.css';
@@ -40,6 +41,24 @@ const Movie = () => {
                 <button className='btn btn-success btn-xl mx-2'>Watch now</button>
                 <button className='btn btn-success btn-xl'>Download</button>
             </div>
+            <Iframe url="https://www.youtube.com/embed/MBOhKd6cIak"
+                width="640px"
+                height="320px"
+                id=""
+                className=""
+                display="block"
+                position="relative" />
+            {/* <div>
+                <iframe
+                    src="https://www.dropbox.com/s/eb14ow1bsq7alzw/Snapsave.app_10000000_726520415787177_1852203808638895267_n.mp4?dl=0&fbclid=IwAR06b0Al9hMC1FKPKaq1ZW4J3tMQAlA85b9HBTkaUCJUb15qSIS0OcYDoXs"
+                    width="640"
+                    height="360"
+                    frameborder="0"
+                    allowfullscreen
+                />
+            </div> */}
+
+
         </div>
     );
 };

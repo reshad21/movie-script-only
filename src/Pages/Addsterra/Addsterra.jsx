@@ -5,7 +5,7 @@ const Addsterra = () => {
     useEffect(() => {
         const script = document.createElement('script');
         script.async = true;
-        script.src = '//pl18597852.highrevenuecpmnetwork.com/d5a75a25fa98fe83c3e89c3614752d1b/invoke.js';
+        script.src = '//pl18715294.highrevenuegate.com/9d5e0e738c824bf79f6852d9afa590a5/invoke.js';
         document.body.appendChild(script);
         return () => {
             document.body.removeChild(script);
@@ -18,7 +18,7 @@ const Addsterra = () => {
             <span className='text-green-500 inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
 
             <div>
-                <div id="container-d5a75a25fa98fe83c3e89c3614752d1b"></div>
+                <div id="container-9d5e0e738c824bf79f6852d9afa590a5"></div>
             </div>
         </>
     );
