@@ -29,7 +29,7 @@ const ShowSearch = () => {
                                             } alt="Shoes" className='w-full h-[300px] object-cover' />
                                         </figure>
 
-                                        <Link to={`/movie/${item?.id}`}>
+                                        <Link to={`/movie/${item?.id}/${item?.title}`}>
                                             <div className="info p-3 absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition text-slate-200 bg-[#0000005b]">
                                                 <span>Rating: {item?.vote_average} <FaStar className='star inline-block mb-1 text-yellow-600' /></span>
                                                 <p>popularity: {item?.popularity}</p>
