@@ -2,7 +2,7 @@
   "name": "movie-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://everydaymovie.com/",
+  "homepage": "https://giveaway100.xyz/",
   "dependencies": {
     "@tanstack/react-query": "^4.22.0",
     "@testing-library/jest-dom": "^5.16.5",
