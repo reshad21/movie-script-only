@@ -14,6 +14,13 @@ const SearchItem = () => {
 
     };
 
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            handleSearch(e);
+        }
+    };
+
     return (
         <div className='m-0 p-0 '>
             <form className="block w-[100%]">
@@ -25,7 +32,8 @@ const SearchItem = () => {
                         className="input text-slate-800 dark:text-[#fdfdfd] border border-slate-400 w-[192px] md:w-full sm:full outline-none bg-[#fff] dark:bg-[#000]"
                         autoComplete="off"
                         value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)} />
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        onKeyDown={handleKeyDown} />
 
                     <FaSearch className='absolute top-4 right-2 cursor-pointer inline-block' onClick={handleSearch} />
                 </div>
