@@ -57,7 +57,7 @@ const HomeSlider = () => {
                                     <p>popularity:{popular?.popularity}</p>
                                     <p className='pb-4'>Release Date: {popular.release_date}</p>
                                     <div className="call_to_action">
-                                        <Link to={`/movie/${popular?.id}`}><button className='btn btn-success btn-outline border-[2px]'><FaTv className='' /> <span className='pl-2'>watch now</span></button></Link>
+                                        <Link to={`/movie/${popular?.id}/${popular?.original_title}`}><button className='btn btn-success btn-outline border-[2px]'><FaTv className='' /> <span className='pl-2'>watch now</span></button></Link>
                                     </div>
                                 </div>
                             </div>
