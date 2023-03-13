@@ -11,6 +11,7 @@ const Populers = () => {
     const swiperRef = useRef();
 
     // const API_KEY = process.env.REACT_APP_apiKey;
+
     const { data: populars = [], isLoading } = useQuery({
         queryKey: ['populars'],
         queryFn: async () => {
@@ -19,6 +20,7 @@ const Populers = () => {
             return data.results;
         }
     })
+
 
     // console.log(populars);
 
