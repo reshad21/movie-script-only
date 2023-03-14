@@ -25,7 +25,7 @@ const PopularTvShow = () => {
 
     if (isLoading) {
         return (
-            <div className='dark:bg-[#3d4451] bg-white flex gap-4 justify-between h-fit p-4 px-0'>
+            <div className='dark:bg-[#3d4451] bg-white grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 justify-between h-fit p-4 px-0'>
                 <CardSkeleton></CardSkeleton>
                 <CardSkeleton></CardSkeleton>
                 <CardSkeleton></CardSkeleton>
