@@ -6,6 +6,8 @@ import AllTvShows from '../Pages/AllTvShows/AllTvShows';
 import Home from '../Pages/Home/Home/Home';
 import Movie from '../Pages/Movie/Movie';
 import ShowSearch from '../Shared/Navber/ShowSearch/ShowSearch';
+import AboutUs from '../Shared/PrivacyPolicy/AboutUs';
+import PrivacyPolicy from '../Shared/PrivacyPolicy/PrivacyPolicy';
 
 const router = createBrowserRouter([
     {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
             {
                 path: '/showSearchResult',
                 element: <ShowSearch></ShowSearch>
+            },
+            {
+                path: '/privacypolicy',
+                element: <PrivacyPolicy></PrivacyPolicy>
+            },
+            {
+                path: '/aboutus',
+                element: <AboutUs></AboutUs>
             },
             {
                 path: '/movie/:id/:name',

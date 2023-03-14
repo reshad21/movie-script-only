@@ -14,6 +14,7 @@ const PopularTvShow = () => {
     const { data: tvShows = [], isLoading } = useQuery({
         queryKey: ['tvShows'],
         queryFn: async () => {
+            await new Promise(resolve => setTimeout(resolve, 90000));
             const res = await fetch(`https://api.themoviedb.org/3/tv/popular?api_key=60328c60edaea9ec7115178b6e8c7a3a`);
             const data = await res.json();
             return data.results;
@@ -25,7 +26,7 @@ const PopularTvShow = () => {
     if (isLoading) {
         return (
             <div className='bg-white flex items-end justify-center h-[200px]'>
-                <h1 className='text-2xl font-semibold text-slate-600'>Loading...</h1>
+                <h1 className='text-2xl font-semibold text-slate-600'>Searching</h1>
             </div>
         )
     }

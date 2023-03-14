@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import Iframe from 'react-iframe';
 import { useParams } from 'react-router-dom';
-import CardSkelton from '../../Shared/CardSkelton/CardSkelton';
+import CardSkeltonPlay from '../../Shared/CardSkelton/CardSkelton';
 import JwPlayer from './JwPlayer';
 import './Movie.css';
 
@@ -14,7 +14,7 @@ const Movie = () => {
         queryKey: ['currentMovieDetail', id],
         queryFn: async () => {
 
-            await new Promise(resolve => setTimeout(resolve, 90000));
+
             const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`);
             const data = await res.json();
             return data;
@@ -32,7 +32,7 @@ const Movie = () => {
     if (isLoading) {
         return (
             <div className='bg-[#3d4451] flex items-end justify-center mt-[5rem] pt-[8px] pb-[270px]'>
-                <CardSkelton></CardSkelton>
+                <CardSkeltonPlay></CardSkeltonPlay>
             </div>
         )
     }
