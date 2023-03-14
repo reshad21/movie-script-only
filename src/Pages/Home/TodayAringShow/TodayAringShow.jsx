@@ -7,6 +7,7 @@ import { Navigation } from "swiper";
 import 'swiper/css';
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import CardSkeleton from '../../../Shared/CardSkelton/CardSkeleton';
 
 const TodayAringShow = () => {
     const swiperRef = useRef();
@@ -24,8 +25,12 @@ const TodayAringShow = () => {
 
     if (isLoading) {
         return (
-            <div className='bg-white flex items-end justify-center h-[200px]'>
-                <h1 className='text-2xl font-semibold text-slate-600'>Searching</h1>
+            <div className='dark:bg-[#3d4451] bg-white flex gap-4 justify-between h-fit p-4 px-0'>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
             </div>
         )
     }

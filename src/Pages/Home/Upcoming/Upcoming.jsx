@@ -7,13 +7,13 @@ import { Navigation } from "swiper";
 import 'swiper/css';
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import CardSkeleton from '../../../Shared/CardSkelton/CardSkeleton';
 const Upcoming = () => {
     const swiperRef = useRef();
     // const API_KEY = process.env.REACT_APP_apiKey;
     const { data: upcomings = [], isLoading } = useQuery({
         queryKey: ['upcomings'],
         queryFn: async () => {
-            await new Promise(resolve => setTimeout(resolve, 90000));
             const res = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=60328c60edaea9ec7115178b6e8c7a3a`);
             const data = await res.json();
             return data.results;
@@ -24,8 +24,12 @@ const Upcoming = () => {
 
     if (isLoading) {
         return (
-            <div className='bg-white flex items-end justify-center h-[200px]'>
-                <h1 className='text-2xl font-semibold text-slate-600'>Searching</h1>
+            <div className='dark:bg-[#3d4451] bg-white flex gap-4 justify-between h-fit p-4 px-0'>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
             </div>
         )
     }
