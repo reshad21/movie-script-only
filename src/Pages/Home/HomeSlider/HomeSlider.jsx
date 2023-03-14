@@ -4,11 +4,13 @@ import { FaTv } from 'react-icons/fa';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from 'react-router-dom';
+import HeroSkelton from '../../../Shared/CardSkelton/HeroSkelton';
 import './HomeSlider.css';
 const HomeSlider = () => {
     const { data: populars = [], isLoading } = useQuery({
         queryKey: ['populars'],
         queryFn: async () => {
+            await new Promise(resolve => setTimeout(resolve, 90000));
             const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=60328c60edaea9ec7115178b6e8c7a3a`);
             const data = await res.json();
             return data.results;
@@ -19,8 +21,8 @@ const HomeSlider = () => {
 
     if (isLoading) {
         return (
-            <div className='bg-white flex items-end justify-center h-[200px]'>
-                <h1 className='text-2xl font-semibold text-slate-600'>Loading...</h1>
+            <div className='dark:bg-[#3d4451] bg-white h-fit p-4 px-0'>
+                <HeroSkelton></HeroSkelton>
             </div>
         )
     }
