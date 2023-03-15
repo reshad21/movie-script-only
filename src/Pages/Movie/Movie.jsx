@@ -1,7 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { FaRegStar, FaStar } from 'react-icons/fa';
-import Iframe from 'react-iframe';
 import { useParams } from 'react-router-dom';
 import demo from '../../assets/banner.jpg';
 import CardSkeltonPlay from '../../Shared/CardSkelton/CardSkelton';
@@ -37,7 +36,7 @@ const Movie = () => {
     }
 
     return (
-        <div className='lg:px-24 md:px-4 px-2 py-20 mt-12 dark:bg-[#3d4451] dark:text-white movie'>
+        <div className='lg:px-24 md:px-4 px-2 py-20 pt-[3rem] mt-12 dark:bg-[#3d4451] dark:text-white movie'>
             <div className="w-full">
                 <JwPlayer currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage}></JwPlayer>
             </div>
@@ -49,8 +48,8 @@ const Movie = () => {
             {
                 currentMovieDetail
                     ?
-                    (<div className="flex gap-3 bg-slate-900 p-3 rounded-lg mb-20 w-full">
-                        <div className='w-[20%]'>
+                    (<div className="flex flex-col gap-3 lg:flex-row md:flex-row bg-slate-900 p-3 rounded-lg mb-20 w-full">
+                        <div className='w-[100%] lg:w-[20%] md:w-[20%]'>
 
                             <img src={
                                 (currentMovieDetail?.poster_path)
@@ -64,7 +63,7 @@ const Movie = () => {
 
                         </div>
 
-                        <div className='w-[80%]'>
+                        <div className='w-[100%] lg:w-[80%] md:w-[80%]'>
                             <div className='relative'>
                                 <h1 className='text-[1.8rem]'>{currentMovieDetail?.original_title} <span className='text-[#8e9aa5] text-[50%]'>{
                                     ((currentMovieDetail?.release_date?.length > 5) || (currentMovieDetail?.first_air_date?.length > 5))
@@ -74,7 +73,7 @@ const Movie = () => {
                                         currentMovieDetail?.release_date || currentMovieDetail?.first_air_date
 
                                 }</span></h1>
-                                <div className='border-2 border-green-500 absolute top-0 right-0 p-3 rounded w-[25%] text-center'>
+                                <div className='border-2 border-green-500 absolute top-10 lg:top-0 md:top-10 right-0 p-1 lg:p-3 md:p-2 rounded w-[35%] lg:w-[25%] md:w-[30%] text-center'>
                                     <a href="https://everydaymovie.online/en/loading?id=315162&amp;title=Puss%20in%20Boots%3A%20The%20Last%20Wish">Subscribe to Watch | $0.00</a>
                                 </div>
                             </div>
@@ -123,13 +122,13 @@ const Movie = () => {
 
 
 
-            <Iframe url="https://www.youtube.com/embed/MBOhKd6cIak"
+            {/* <Iframe url="https://www.youtube.com/embed/MBOhKd6cIak"
                 width="640px"
                 height="320px"
                 id=""
                 className=""
                 display="block"
-                position="relative" />
+                position="relative" /> */}
 
 
         </div>
