@@ -4,6 +4,7 @@ import { FaRegStar, FaStar } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
 import demo from '../../assets/banner.jpg';
 import CardSkeltonPlay from '../../Shared/CardSkelton/CardSkelton';
+import Addsterra from '../Addsterra/Addsterra';
 import JwPlayer from './JwPlayer';
 import './Movie.css';
 
@@ -44,7 +45,6 @@ const Movie = () => {
                 <button className='btn btn-success btn-xl mx-2'>Watch now</button>
                 <button className='btn btn-success btn-xl'>Download</button>
             </div>
-
             {
                 currentMovieDetail
                     ?
@@ -117,10 +117,7 @@ const Movie = () => {
                     </div>)
                     :
                     (<p>No data found</p>)
-
             }
-
-
 
             {/* <Iframe url="https://www.youtube.com/embed/MBOhKd6cIak"
                 width="640px"
@@ -130,7 +127,7 @@ const Movie = () => {
                 display="block"
                 position="relative" /> */}
 
-
+            <Addsterra></Addsterra>
         </div>
     );
 };

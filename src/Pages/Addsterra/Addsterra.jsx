@@ -14,8 +14,8 @@ const Addsterra = () => {
 
     return (
         <>
-            <h1 className='my-4 text-2xl inline-block rounded p-2 text-slate-600 dark:text-slate-200'>Popular Offer</h1>
-            <span className='text-green-500 inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
+            <h1 className='my-4 text-2xl rounded p-2 text-slate-600 dark:text-slate-200 flex items-center justify-start gap-2 '><span>Popular Offer</span> <span className='text-green-500 inline-block text-2xl'><FaAngleDoubleRight /></span></h1>
+
 
             <div>
                 <div id="container-9d5e0e738c824bf79f6852d9afa590a5"></div>
