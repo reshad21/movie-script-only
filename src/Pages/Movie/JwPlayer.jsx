@@ -6,8 +6,12 @@ const JwPlayer = ({ currentMovieDetail }) => {
 
     const imgUrl = 'https://image.tmdb.org/t/p/w500';
     const bannerImage = imgUrl + currentMovieDetail?.backdrop_path;
-    const posterImage = imgUrl + currentMovieDetail?.poster_path;
-    console.log(posterImage);
+    // const posterImage = imgUrl + currentMovieDetail?.poster_path;
+
+    const posterUrl = bannerImage || moviePoster;
+    // console.log({
+    //     posterImage, bannerImage, posterUrl
+    // });
 
     return (
         <div>
@@ -16,16 +20,20 @@ const JwPlayer = ({ currentMovieDetail }) => {
                 class="video-js"
                 controls
                 preload="auto"
-                width="640"
-                height="264"
-                poster={
-                    (bannerImage)
-                        ?
-                        bannerImage
-                        :
-                        moviePoster
-                }
-                data-setup="{}"
+                // width="640"
+                // height="164"
+                style={{
+                    width: '100%',
+                    height: '500px',
+                    backgroundSize: 'cover',
+                    backgroundBlendMode: 'multiply',
+                    backgroundPosition: '100% 100%',
+                    backgroundImage: `url(${posterUrl})`,
+                    backgroundColor: '#0000008a',
+                    objectFit: 'contain',
+                }}
+                poster={posterUrl}
+                data-setup="{ }"
             >
                 <source src={movieVideo} type="video/mp4" />
                 <source src="MY_VIDEO.webm" type="video/webm" />
@@ -37,7 +45,7 @@ const JwPlayer = ({ currentMovieDetail }) => {
                     >
                 </p>
             </video>
-        </div>
+        </div >
     );
 };
 

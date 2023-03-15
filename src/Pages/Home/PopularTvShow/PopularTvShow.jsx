@@ -15,7 +15,6 @@ const PopularTvShow = () => {
     const { data: tvShows = [], isLoading } = useQuery({
         queryKey: ['tvShows'],
         queryFn: async () => {
-            await new Promise(resolve => setTimeout(resolve, 90000));
             const res = await fetch(`https://api.themoviedb.org/3/tv/popular?api_key=60328c60edaea9ec7115178b6e8c7a3a`);
             const data = await res.json();
             return data.results;
