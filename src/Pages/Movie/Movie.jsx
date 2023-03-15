@@ -42,7 +42,7 @@ const Movie = () => {
                 <button className='btn btn-success btn-xl mx-2'>Watch now</button>
                 <button className='btn btn-success btn-xl'>Download</button>
             </div>
-            <div className="flex gap-3 bg-slate-900 p-3 rounded-lg">
+            <div className="flex gap-3 bg-slate-900 p-3 rounded-lg mb-20">
                 <div className=''>
                     <img src={posterImage} alt="" title='' />
                 </div>
@@ -54,7 +54,7 @@ const Movie = () => {
                             <a href="https://everydaymovie.online/en/loading?id=315162&amp;title=Puss%20in%20Boots%3A%20The%20Last%20Wish">Subscribe to Watch | $0.00</a>
                         </div>
                     </div>
-                    <div>
+                    <div className='my-3'>
                         <div>
                             <i className="fa fa-star text-warning"></i>
                             <i className="fa fa-star text-warning"></i>
@@ -68,21 +68,23 @@ const Movie = () => {
                             <i className="fa fa-star-o text-muted"></i>
                         </div>
                         <div>
-                            <span>{currentMovieDetail?.vote_average}/10</span> <span>by {currentMovieDetail?.vote_count} users</span>
+                            <span className='text-[80%]'>{currentMovieDetail?.vote_average}/10</span> <span className='text-[80%]'>by {currentMovieDetail?.vote_count} users</span>
                         </div>
                     </div>
-                    <div>
-                        <p>{currentMovieDetail?.overview}</p>
+                    <div className='mb-3'>
+                        <p className='text-slate-400'>{currentMovieDetail?.overview}</p>
                     </div>
                     <div>
                         <ul>
-                            <li>Released: <span>{currentMovieDetail?.release_date}</span></li>
-                            <li>Runtime: <span>{currentMovieDetail?.runtime} minutes</span></li>
+                            <li className='p-2 rounded bg-slate-800'><span className='text-slate-400'>Released</span>: <span>{currentMovieDetail?.release_date}</span></li>
 
-                            <li>Genre: {currentMovieDetail?.genres.map(genre => <span>{genre.name}, </span>)}</li>
+                            <li className='p-2 rounded'><span className='text-slate-400'>Runtime:</span> <span>{currentMovieDetail?.runtime} minutes</span></li>
 
+                            <li className='p-2 rounded bg-slate-800'><span className='text-slate-400'>Genre:</span> {currentMovieDetail?.genres.map(genre => <span>{genre.name}, </span>)}</li>
 
-                            <li>production Companies: {currentMovieDetail?.production_companies.map(production => <span>{production?.name}, </span>)}</li>
+                            <li className='p-2 rounded'><span className='text-slate-400'>Popularity:</span> <span>{currentMovieDetail?.popularity} Likes</span></li>
+
+                            <li className='p-2 rounded bg-slate-800'><span className='text-slate-400'>production Companies:</span> {currentMovieDetail?.production_companies.map(production => <span>{production?.name}, </span>)}</li>
                         </ul>
                     </div>
                 </div>
