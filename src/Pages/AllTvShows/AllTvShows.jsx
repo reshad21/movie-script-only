@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { FaAngleDoubleRight } from 'react-icons/fa';
+import CardSkeleton from '../../Shared/CardSkelton/CardSkeleton';
 import TvShow from '../Home/TvShow/TvShow';
 
 const AllTvShows = () => {
@@ -17,8 +18,17 @@ const AllTvShows = () => {
 
     if (isLoading) {
         return (
-            <div className='bg-white flex items-end justify-center h-[200px]'>
-                <h1 className='text-2xl font-semibold text-slate-600'>Loading...</h1>
+            <div className='dark:bg-[#3d4451] bg-white grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-4 justify-between h-fit p-4 px-28 mt-20'>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
+                <CardSkeleton></CardSkeleton>
             </div>
         )
     }
