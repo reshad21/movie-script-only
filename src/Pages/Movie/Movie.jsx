@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import demo from '../../assets/banner.jpg';
 import CardSkeltonPlay from '../../Shared/CardSkelton/CardSkelton';
 import Addsterra from '../Addsterra/Addsterra';
-import JwPlayer from './JwPlayer';
+import CustomVideo from './CustomVideo';
 import './Movie.css';
 
 const Movie = () => {
@@ -38,9 +38,18 @@ const Movie = () => {
 
     return (
         <div className='lg:px-24 md:px-4 px-2 py-20 pt-[3rem] mt-12 dark:bg-[#3d4451] dark:text-white movie'>
-            <div className="w-full">
-                <JwPlayer currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage}></JwPlayer>
+
+            <div className="w-full shadow" style={{
+                backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(${posterImage})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: '100% 100%',
+                backgroundPosition: '50% 100%',
+
+            }}>
+                <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage}></CustomVideo>
             </div>
+
+
             <div className="action__btn my-5">
                 <button className='btn btn-success btn-xl mx-2'>Watch now</button>
                 <button className='btn btn-success btn-xl'>Download</button>
@@ -119,15 +128,10 @@ const Movie = () => {
                     (<p>No data found</p>)
             }
 
-            {/* <Iframe url="https://www.youtube.com/embed/MBOhKd6cIak"
-                width="640px"
-                height="320px"
-                id=""
-                className=""
-                display="block"
-                position="relative" /> */}
+
 
             <Addsterra></Addsterra>
+
         </div>
     );
 };

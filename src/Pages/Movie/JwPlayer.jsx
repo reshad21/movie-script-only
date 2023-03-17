@@ -1,6 +1,6 @@
 import React from 'react';
 import moviePoster from '../../assets/banner.jpg';
-import movieVideo from '../../assets/movie.mp4';
+// import movieVideo from '../../assets/movie.mp4';
 const JwPlayer = ({ currentMovieDetail }) => {
     console.log(currentMovieDetail);
 
@@ -37,9 +37,10 @@ const JwPlayer = ({ currentMovieDetail }) => {
                         moviePoster
 
                 }
+                src='//ok.ru/videoembed/4842880174625'
                 data-setup="{ }"
             >
-                <source src={movieVideo} type="video/mp4" />
+                <source src='https://ok.ru/live/2001158479822' type="video/mp4" />
                 <source src="MY_VIDEO.webm" type="video/webm" />
                 <p class="vjs-no-js">
                     To view this video please enable JavaScript, and consider upgrading to a
