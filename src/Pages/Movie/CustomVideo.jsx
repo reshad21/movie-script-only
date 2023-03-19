@@ -2,13 +2,14 @@ import React from 'react';
 import Iframe from 'react-iframe';
 import moviePoster from '../../assets/banner.jpg';
 
-const CustomVideo = ({ currentMovieDetail }) => {
+const CustomVideo = ({ currentMovieDetail, videoId }) => {
     console.log(currentMovieDetail);
 
     const imgUrl = 'https://image.tmdb.org/t/p/w500';
     const bannerImage = imgUrl + currentMovieDetail?.backdrop_path;
     const posterUrl = bannerImage || moviePoster;
     console.log(posterUrl);
+    const videoUrl = `https://drive.google.com/file/d/${videoId}/preview`;
 
     const style = {
         width: '100%',
@@ -28,7 +29,8 @@ const CustomVideo = ({ currentMovieDetail }) => {
     return (
         <div className='relative'>
 
-            <Iframe src='//ok.ru/videoembed/4842880174625'
+            <Iframe
+                src={videoUrl}
                 width="80%"
                 height="500px"
                 id=""

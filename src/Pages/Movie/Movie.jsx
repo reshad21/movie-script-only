@@ -46,7 +46,7 @@ const Movie = () => {
                 backgroundPosition: '50% 100%',
 
             }}>
-                <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage}></CustomVideo>
+                <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1FAmNn_nmDQUMSZvnRXuOHoA2R-_ROTeC"></CustomVideo>
             </div>
 
 
