@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaAngleDoubleRight } from 'react-icons/fa';
+import { FaAngleDoubleLeft, FaAngleDoubleRight } from 'react-icons/fa';
 
 const Addsterra = () => {
     useEffect(() => {
@@ -14,7 +14,10 @@ const Addsterra = () => {
 
     return (
         <>
-            <h1 className='my-4 text-2xl rounded p-2 text-slate-600 dark:text-slate-200 flex items-center justify-start gap-2 '><span>Popular Offer</span> <span className='text-green-500 inline-block text-2xl'><FaAngleDoubleRight /></span></h1>
+            <h1 className='my-2 text-2xl rounded p-2 text-slate-600 dark:text-slate-200 flex items-center justify-start gap-2 '>
+                <span className='text-green-500 inline-block text-2xl'><FaAngleDoubleLeft /></span>
+                <span>Popular Show</span> <span className='text-green-500 inline-block text-2xl'><FaAngleDoubleRight /></span>
+            </h1>
 
 
             <div>

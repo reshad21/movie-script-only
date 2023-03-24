@@ -49,13 +49,14 @@ const Movie = () => {
                 <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1AZfdhhw2UGXfLuHh1Ab4yYEKwARKkqme"></CustomVideo>
             </div>
 
+            <Addsterra></Addsterra>
 
             <div className="action__btn my-5">
                 <button className='btn btn-success btn-xl mx-2'>Watch now</button>
                 <button className='btn btn-success btn-xl'>Download</button>
             </div>
 
-            <Addsterra></Addsterra>
+
 
             {
                 currentMovieDetail
@@ -133,7 +134,7 @@ const Movie = () => {
 
 
 
-            
+
 
         </div>
     );
