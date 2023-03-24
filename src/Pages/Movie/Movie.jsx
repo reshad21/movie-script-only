@@ -46,7 +46,7 @@ const Movie = () => {
                 backgroundPosition: '50% 100%',
 
             }}>
-                <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1FAmNn_nmDQUMSZvnRXuOHoA2R-_ROTeC"></CustomVideo>
+                <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1AZfdhhw2UGXfLuHh1Ab4yYEKwARKkqme"></CustomVideo>
             </div>
 
 
@@ -54,6 +54,9 @@ const Movie = () => {
                 <button className='btn btn-success btn-xl mx-2'>Watch now</button>
                 <button className='btn btn-success btn-xl'>Download</button>
             </div>
+
+            <Addsterra></Addsterra>
+
             {
                 currentMovieDetail
                     ?
@@ -130,7 +133,7 @@ const Movie = () => {
 
 
 
-            <Addsterra></Addsterra>
+            
 
         </div>
     );
