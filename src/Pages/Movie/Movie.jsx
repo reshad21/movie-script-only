@@ -46,10 +46,11 @@ const Movie = () => {
                 backgroundPosition: '50% 100%',
 
             }}>
-                <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1AiKk9mAAdEQALCXwxUO-rqwY9NzvAWre"></CustomVideo>
+                <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1I8nBZlsMEZUXNP_YK_vdSVJDjTDG4jcV"></CustomVideo>
             </div>
 
             {/* <Addsterra></Addsterra> */}
+
 
             <div className="action__btn my-5">
                 <button className='btn btn-success btn-xl mx-2'>Watch now</button>

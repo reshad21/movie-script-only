@@ -37,18 +37,9 @@ const JwPlayer = ({ currentMovieDetail }) => {
                         moviePoster
 
                 }
-                src='//ok.ru/videoembed/4842880174625'
+                src='https://drive.google.com/file/d/1AiKk9mAAdEQALCXwxUO-rqwY9NzvAWre/view'
                 data-setup="{ }"
             >
-                <source src='https://ok.ru/live/2001158479822' type="video/mp4" />
-                <source src="MY_VIDEO.webm" type="video/webm" />
-                <p class="vjs-no-js">
-                    To view this video please enable JavaScript, and consider upgrading to a
-                    web browser that
-                    <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noreferrer"
-                    >supports HTML5 video</a
-                    >
-                </p>
             </video>
         </div >
     );
