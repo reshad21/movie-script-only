@@ -2,9 +2,9 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
-import demo from '../../assets/banner.jpg';
 import CardSkeltonPlay from '../../Shared/CardSkelton/CardSkelton';
-import Addsterra from '../Addsterra/Addsterra';
+import demo from '../../assets/banner.jpg';
+// import Addsterra from '../Addsterra/Addsterra';
 import CustomVideo from './CustomVideo';
 import './Movie.css';
 
@@ -46,10 +46,10 @@ const Movie = () => {
                 backgroundPosition: '50% 100%',
 
             }}>
-                <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1AZfdhhw2UGXfLuHh1Ab4yYEKwARKkqme"></CustomVideo>
+                <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1AiKk9mAAdEQALCXwxUO-rqwY9NzvAWre"></CustomVideo>
             </div>
 
-            <Addsterra></Addsterra>
+            {/* <Addsterra></Addsterra> */}
 
             <div className="action__btn my-5">
                 <button className='btn btn-success btn-xl mx-2'>Watch now</button>
