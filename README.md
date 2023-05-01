@@ -77,7 +77,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### this is the heart of the website you will paste this code to the index.html file where before body tag is close
 
-![My Image](image-for-reammefile.png)
+![My Image](https://ibb.co/NnWFzSV)
 
 <!-- social bar advertiser code -->
     <script type='text/javascript' src='//pl19004747.highrevenuegate.com/c8/01/19/c80119583afd90df7038eb54f58ca15d.js'></script>
