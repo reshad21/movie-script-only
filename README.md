@@ -77,8 +77,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### this is the heart of the website you will paste this code to the index.html file where before body tag is close
 
-![My Image](https://ibb.co/NnWFzSV)
-<img src="https://ibb.co/NnWFzSV" alt="Alt text" title="Optional title">
+<!-- ![My Image](https://ibb.co/NnWFzSV)
+<img src="https://ibb.co/NnWFzSV" alt="Alt text" title="Optional title"> -->
 [Code Image](https://ibb.co/NnWFzSV)
 
 <!-- social bar advertiser code -->
