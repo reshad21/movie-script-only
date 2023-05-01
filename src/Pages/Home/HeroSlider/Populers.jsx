@@ -40,7 +40,7 @@ const Populers = () => {
     return (
         <div className='mb-4 relative'>
             <div className="title flex items-center gap-1 align-middle">
-                <h1 className='my-5 text-2xl inline-block rounded p-2 text-slate-600 dark:text-slate-200'>Popular Movies</h1>
+                <h1 className='my-5 text-2xl inline-block rounded p-2 text-slate-800 dark:text-slate-200'>Popular Movies</h1>
                 <span className='text-green-500 inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
             </div>
 
@@ -52,7 +52,7 @@ const Populers = () => {
 
                 className="my-swiper"
                 spaceBetween={20}
-                slidesPerView={5}
+                slidesPerView={6}
                 breakpoints={{
                     0: {
                         slidesPerView: 2,
@@ -67,8 +67,8 @@ const Populers = () => {
                         spaceBetween: 15,
                     },
                     1000: {
-                        slidesPerView: 5,
-                        spaceBetween: 15,
+                        slidesPerView: 6,
+                        spaceBetween: 20,
                     },
                 }}
             >
