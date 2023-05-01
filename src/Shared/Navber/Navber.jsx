@@ -84,7 +84,7 @@ const Navber = () => {
     </>
     return (
         <div>
-            <div className="navbar bg-base-100 dark:bg-[#2f3541] dark:text-white fixed top-0 z-30 w-full lg:px-[60px] md:px-[30px] backdrop-blur">
+            <div className="navbar bg-base-100 dark:bg-[#13005A] dark:text-white fixed top-0 z-30 w-full lg:px-[60px] md:px-[30px] backdrop-blur">
                 <div className="navbar justify-between ">
                     <div className="w-full flex justify-between">
                         <ul className="menu menu-horizontal px-1 hidden lg:flex">

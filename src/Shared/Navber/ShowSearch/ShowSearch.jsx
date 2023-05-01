@@ -40,7 +40,7 @@ const ShowSearch = () => {
 
     return (
         <>
-            <div className='lg:px-24 md:px-4 px-2 py-7 mt-12 pt-10 dark:bg-[#3d4451] dark:text-white'>
+            <div className='lg:px-24 md:px-4 px-2 py-7 mt-12 pt-10 dark:bg-[#090833] dark:text-white'>
                 <div className='grid grid-cols-2 lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 sm:gap-2 lg:gap-4 gap-2'>
                     {
                         results?.map(item => {
@@ -64,13 +64,13 @@ const ShowSearch = () => {
                                                     <span>Rating: {item?.vote_average} <FaStar className='star inline-block mb-1 text-yellow-600' /></span>
                                                     <p>popularity: {item?.popularity}</p>
                                                     <p>Release Date: {item?.release_date}</p>
-                                                    <FaYoutube className='inline-block text-7xl ml-20 mt-9 text-rose-500' />
+                                                    <FaYoutube className='inline-block text-7xl ml-[50px] mt-1 text-rose-500' />
                                                 </div>
                                             </Link>
 
                                         </div>
                                     </div>
-                                    <p className='pl-2 pt-1 font-extralight text-[14px] text-slate-600 dark:text-slate-200'>
+                                    <p className='pl-2 pt-1 font-extralight text-[14px] text-slate-800 dark:text-slate-200'>
                                         {
                                             (item?.title)
                                                 ?

@@ -37,7 +37,7 @@ const Movie = () => {
     }
 
     return (
-        <div className='lg:px-24 md:px-4 px-2 py-20 pt-[3rem] mt-12 dark:bg-[#3d4451] dark:text-white movie'>
+        <div className='lg:px-24 md:px-4 px-2 py-20 pt-[3rem] mt-12 dark:bg-[#090833] dark:text-white movie'>
 
             <div className="w-full shadow" style={{
                 backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(${posterImage})`,
@@ -53,8 +53,8 @@ const Movie = () => {
 
 
             <div className="action__btn my-5">
-                <button className='btn btn-success btn-xl mx-2'>Watch now</button>
-                <button className='btn btn-success btn-xl'>Download</button>
+                <button className='btn bg-[#090833] btn-xl mx-2'>Watch now</button>
+                <button className='btn bg-[#090833] btn-xl'>Download</button>
             </div>
 
 
