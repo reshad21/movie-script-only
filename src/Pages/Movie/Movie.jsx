@@ -47,7 +47,7 @@ const Movie = () => {
                 backgroundPosition: '50% 100%',
 
             }}>
-                <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1I8nBZlsMEZUXNP_YK_vdSVJDjTDG4jcV"></CustomVideo>
+                <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1i0rsjnSAjD3NVCEi5cv2Kmo_gZSdH6AC"></CustomVideo>
             </div>
 
             {/* <Addsterra></Addsterra> */}

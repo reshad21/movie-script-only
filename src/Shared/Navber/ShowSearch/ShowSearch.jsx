@@ -70,7 +70,7 @@ const ShowSearch = () => {
 
                                         </div>
                                     </div>
-                                    <p className='pl-2 pt-1 font-extralight text-[14px] text-slate-800 dark:text-slate-200'>
+                                    <p className='pl-2 pt-1 font-extralight text-[14px] text-slate-200'>
                                         {
                                             (item?.title)
                                                 ?

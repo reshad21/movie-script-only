@@ -31,7 +31,7 @@ const AirTime = ({ todayShow }) => {
 
                 </div>
             </div>
-            <p className='pl-2 pt-1 dark:font-extralight text-[14px] text-slate-800 dark:text-slate-200'>{todayShow?.original_name}</p>
+            <p className='pl-2 pt-1 dark:font-extralight text-[14px] text-slate-200'>{todayShow?.original_name}</p>
         </div>
     );
 };
