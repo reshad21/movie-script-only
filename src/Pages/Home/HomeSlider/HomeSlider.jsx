@@ -20,7 +20,7 @@ const HomeSlider = () => {
 
     if (isLoading) {
         return (
-            <div className='dark:bg-[#3d4451] bg-white h-fit p-4 px-0'>
+            <div className='bg-[#090833] h-fit p-4 px-0'>
                 <HeroSkelton></HeroSkelton>
             </div>
         )
@@ -58,7 +58,7 @@ const HomeSlider = () => {
                                     <p>popularity:{popular?.popularity}</p>
                                     <p className='pb-4'>Release Date: {popular.release_date}</p>
                                     <div className="call_to_action">
-                                        <Link to={`/movie/${popular?.id}/${popular?.original_title}`}><button className='btn btn-success btn-outline border-[2px]'><FaTv className='' /> <span className='pl-2'>watch now</span></button></Link>
+                                        <Link to={`/movie/${popular?.id}/${popular?.original_title}`}><button className='btn hover:bg-[#e6e101] border-[#e6e101] text-[#e6e101] btn-outline border-[2px]'><FaTv className='' /> <span className='pl-2'>watch now</span></button></Link>
                                     </div>
                                 </div>
                             </div>

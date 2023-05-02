@@ -25,7 +25,7 @@ const PopularTvShow = () => {
 
     if (isLoading) {
         return (
-            <div className='dark:bg-[#3d4451] bg-white grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-4 justify-between h-fit p-4 px-0'>
+            <div className='bg-[#090833] grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-4 justify-between h-fit p-4 px-0'>
                 <CardSkeleton></CardSkeleton>
                 <CardSkeleton></CardSkeleton>
                 <CardSkeleton></CardSkeleton>
@@ -37,8 +37,8 @@ const PopularTvShow = () => {
     return (
         <div className='relative '>
             <div className="title flex items-center gap-1 align-middle">
-                <h1 className='my-4 text-2xl inline-block rounded p-2 text-slate-800 dark:text-slate-200'>Popular Tv Show</h1>
-                <span className='text-green-500 inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
+                <h1 className='my-4 text-2xl inline-block rounded p-2 text-slate-200'>Popular Tv Show</h1>
+                <span className='text-[#e6e101] inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
             </div>
             <Swiper
                 modules={[Navigation]}
@@ -74,7 +74,7 @@ const PopularTvShow = () => {
                     tvShows?.map(tvshow => <SwiperSlide><TvShow tvshow={tvshow} key={tvshow?.id}></TvShow></SwiperSlide>)
                 }
             </Swiper>
-            <div className='customize__navigation absolute top-7 right-3 text-3xl font-light text-slate-600 dark:text-slate-200'>
+            <div className='customize__navigation absolute top-7 right-3 text-3xl font-light text-[#e6e101]'>
                 <button onClick={() => swiperRef.current?.slidePrev()}><FaRegCaretSquareLeft /></button>
                 <button onClick={() => swiperRef.current?.slideNext()}><FaRegCaretSquareRight /></button>
             </div>

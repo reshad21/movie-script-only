@@ -18,7 +18,7 @@ const AllMovies = () => {
 
     if (isLoading) {
         return (
-            <div className='dark:bg-[#3d4451] bg-white grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-4 justify-between h-fit p-4 px-28 mt-20'>
+            <div className='bg-[#090833] grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-4 justify-between h-fit p-4 px-28 mt-20'>
                 <CardSkeleton></CardSkeleton>
                 <CardSkeleton></CardSkeleton>
                 <CardSkeleton></CardSkeleton>
@@ -33,10 +33,10 @@ const AllMovies = () => {
         )
     }
     return (
-        <div className='lg:px-24 md:px-4 px-2 py-7 mt-12 dark:bg-[#090833] dark:text-white'>
+        <div className='lg:px-24 md:px-4 px-2 py-7 mt-12 bg-[#090833] text-white'>
             <div className="title flex items-center gap-1 align-middle">
-                <h1 className='my-5 text-2xl inline-block rounded p-2 text-slate-800 dark:text-slate-200'>Latest Movies</h1>
-                <span className='text-green-500 inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
+                <h1 className='my-5 text-2xl inline-block rounded p-2 text-slate-200'>Latest Movies</h1>
+                <span className='text-[#e6e101] inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-6 lg:gap-3 md:grid-cols-3 md:gap-3 sm:grid-cols-2 sm:gap-3">
                 {

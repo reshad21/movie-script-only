@@ -13,7 +13,7 @@ const ShowSearch = () => {
 
     if (loading) {
         return (
-            <div className='dark:bg-[#3d4451] bg-white grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-4 justify-between h-fit p-4 px-28 mt-20'>
+            <div className='dark:bg-[#090833] bg-white grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-4 justify-between h-fit p-4 px-28 mt-20'>
                 <CardSkeleton></CardSkeleton>
                 <CardSkeleton></CardSkeleton>
                 <CardSkeleton></CardSkeleton>
@@ -30,7 +30,7 @@ const ShowSearch = () => {
 
     if (results.length === 0) {
         return (
-            <div className='dark:bg-[#3d4451] bg-white grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-4 justify-between h-fit p-4 px-28 mt-20 relative'>
+            <div className='dark:bg-[#090833] bg-white grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-4 justify-between h-screen p-4 px-28 mt-20 relative'>
                 <CardSkeleton>No data found</CardSkeleton>
                 <p className='p-2 absolute top-[28px] left-[115px] z-10 inline-block w-[16%] h-fit font-bold text-red-800'>No Data Found...! Please Ensure Your Search...</p>
             </div>

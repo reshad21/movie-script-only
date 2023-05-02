@@ -20,7 +20,7 @@ const CustomVideo = ({ currentMovieDetail, videoId }) => {
         backgroundColor: '#0000008a',
         objectFit: 'contain',
         margin: '0 auto',
-        border: '5px solid #0f172a',
+        border: '5px solid #13005A',
         // zIndex: -1,
 
 

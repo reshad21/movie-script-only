@@ -84,7 +84,7 @@ const Navber = () => {
     </>
     return (
         <div>
-            <div className="navbar bg-base-100 dark:bg-[#13005A] dark:text-white fixed top-0 z-30 w-full lg:px-[60px] md:px-[30px] backdrop-blur">
+            <div className="navbar bg-[#13005A] dark:bg-[#13005A] dark:text-white fixed top-0 z-30 w-full lg:px-[60px] md:px-[30px] backdrop-blur">
                 <div className="navbar justify-between ">
                     <div className="w-full flex justify-between">
                         <ul className="menu menu-horizontal px-1 hidden lg:flex">
@@ -105,7 +105,7 @@ const Navber = () => {
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <SearchItem></SearchItem>
-                        <FaBahai className='text-[#080808] dark:text-[#949393]  ml-2 text-2xl cursor-pointer inline-block' onClick={handleThemeSwitch} />
+                        {/* <FaBahai className='text-[#080808] dark:text-[#949393]  ml-2 text-2xl cursor-pointer inline-block' onClick={handleThemeSwitch} /> */}
                     </div>
                 </div>
             </div>

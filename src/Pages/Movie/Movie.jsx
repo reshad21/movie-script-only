@@ -30,19 +30,20 @@ const Movie = () => {
 
     if (isLoading) {
         return (
-            <div className='bg-[#3d4451] flex items-end justify-center mt-[5rem] pt-[8px] pb-[270px]'>
+            <div className='bg-[#090833] flex items-end justify-center mt-[5rem] pt-[8px] pb-[270px]'>
                 <CardSkeltonPlay></CardSkeltonPlay>
             </div>
         )
     }
 
     return (
-        <div className='lg:px-24 md:px-4 px-2 py-20 pt-[3rem] mt-12 dark:bg-[#090833] dark:text-white movie'>
+        <div className='lg:px-24 md:px-4 px-2 py-20 pt-[3rem] mt-12 bg-[#090833] text-white movie'>
 
             <div className="w-full shadow" style={{
                 backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(${posterImage})`,
                 backgroundRepeat: "no-repeat",
-                backgroundSize: '100% 100%',
+                // backgroundSize: '100% 100%',
+                backgroundSize: 'cover',
                 backgroundPosition: '50% 100%',
 
             }}>
@@ -56,8 +57,6 @@ const Movie = () => {
                 <button className='btn bg-[#090833] btn-xl mx-2'>Watch now</button>
                 <button className='btn bg-[#090833] btn-xl'>Download</button>
             </div>
-
-
 
             {
                 currentMovieDetail
@@ -87,7 +86,7 @@ const Movie = () => {
                                         currentMovieDetail?.release_date || currentMovieDetail?.first_air_date
 
                                 }</span></h1>
-                                <div className='border-2 border-green-500 absolute top-10 lg:top-0 md:top-10 right-0 p-1 lg:p-3 md:p-2 rounded w-[35%] lg:w-[25%] md:w-[30%] text-center'>
+                                <div className='border-2 border-[#9eac03] absolute top-10 lg:top-0 md:top-10 right-0 p-1 lg:p-3 md:p-2 rounded w-[35%] lg:w-[25%] md:w-[30%] text-center'>
                                     <a href="https://everydaymovie.online/en/loading?id=315162&amp;title=Puss%20in%20Boots%3A%20The%20Last%20Wish">Subscribe to Watch | $0.00</a>
                                 </div>
                             </div>
@@ -132,6 +131,8 @@ const Movie = () => {
                     :
                     (<p>No data found</p>)
             }
+
+
 
 
 
