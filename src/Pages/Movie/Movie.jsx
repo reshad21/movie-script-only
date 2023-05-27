@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import CardSkeltonPlay from '../../Shared/CardSkelton/CardSkelton';
 import demo from '../../assets/banner.jpg';
 // import Addsterra from '../Addsterra/Addsterra';
-import CustomVideo from './CustomVideo';
+import JwPlayer from './JwPlayer';
 import './Movie.css';
 
 const Movie = () => {
@@ -27,6 +27,7 @@ const Movie = () => {
     const imgUrl = 'https://image.tmdb.org/t/p/w500';
 
     const posterImage = imgUrl + currentMovieDetail?.poster_path;
+    const bannerImage = imgUrl + currentMovieDetail?.backdrop_path;
 
     if (isLoading) {
         return (
@@ -37,9 +38,17 @@ const Movie = () => {
     }
 
     return (
-        <div className='lg:px-24 md:px-4 px-2 py-20 pt-[3rem] mt-12 bg-[#090833] text-white movie'>
+        <div className='lg:px-24 md:px-4 px-2 py-20 pt-[3rem] mt-12 bg-[#090833] text-white movie' style={{
+            backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(${posterImage})`,
+            backgroundRepeat: "no-repeat",
+            // backgroundSize: '100% 100%',
+            backgroundSize: 'cover',
+            backgroundPosition: '50% 100%',
+            // height: "100vh",
+            objectFit: "cover"
+        }}>
 
-            <div className="w-full shadow" style={{
+            {/* <div className="w-full shadow" style={{
                 backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(${posterImage})`,
                 backgroundRepeat: "no-repeat",
                 // backgroundSize: '100% 100%',
@@ -48,9 +57,26 @@ const Movie = () => {
 
             }}>
                 <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1i0rsjnSAjD3NVCEi5cv2Kmo_gZSdH6AC"></CustomVideo>
-            </div>
+
+                <JwPlayer currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1i0rsjnSAjD3NVCEi5cv2Kmo_gZSdH6AC"></JwPlayer>
+
+            </div> */}
 
             {/* <Addsterra></Addsterra> */}
+
+
+            <div className="w-full shadow">
+                {/* <img src={bannerImage} alt="" className='object-cover w-full' /> */}
+                <JwPlayer currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1i0rsjnSAjD3NVCEi5cv2Kmo_gZSdH6AC"></JwPlayer>
+            </div>
+
+            {/* <div className="w-full shadow">
+                <UseRefPlayer></UseRefPlayer>
+            </div> */}
+
+            {/* <div className="w-full shadow">
+                <UseRefPlayer currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1i0rsjnSAjD3NVCEi5cv2Kmo_gZSdH6AC"></UseRefPlayer>
+            </div> */}
 
 
             <div className="action__btn my-5">

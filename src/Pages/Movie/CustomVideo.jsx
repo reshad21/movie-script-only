@@ -22,8 +22,6 @@ const CustomVideo = ({ currentMovieDetail, videoId }) => {
         margin: '0 auto',
         border: '5px solid #13005A',
         // zIndex: -1,
-
-
     }
 
     return (
