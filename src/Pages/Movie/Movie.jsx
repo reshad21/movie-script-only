@@ -5,10 +5,14 @@ import { useParams } from 'react-router-dom';
 import CardSkeltonPlay from '../../Shared/CardSkelton/CardSkelton';
 import demo from '../../assets/banner.jpg';
 // import Addsterra from '../Addsterra/Addsterra';
+import Populers from '../Home/HeroSlider/Populers';
+import SugestedShow from '../Home/Suggested/SugestedShow';
 import JwPlayer from './JwPlayer';
 import './Movie.css';
 
 const Movie = () => {
+    // const { similar } = useContext(AuthContext);
+    // const suggested = similar?.results;
 
     const API_KEY = '60328c60edaea9ec7115178b6e8c7a3a';
     const { id } = useParams();
@@ -21,13 +25,11 @@ const Movie = () => {
         }
     })
 
-    // console.log("default image is", demo);
-    // console.log("Found data", currentMovieDetail);
 
     const imgUrl = 'https://image.tmdb.org/t/p/w500';
 
     const posterImage = imgUrl + currentMovieDetail?.poster_path;
-    const bannerImage = imgUrl + currentMovieDetail?.backdrop_path;
+    // const bannerImage = imgUrl + currentMovieDetail?.backdrop_path;
 
     if (isLoading) {
         return (
@@ -58,25 +60,13 @@ const Movie = () => {
             }}>
                 <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1i0rsjnSAjD3NVCEi5cv2Kmo_gZSdH6AC"></CustomVideo>
 
-                <JwPlayer currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1i0rsjnSAjD3NVCEi5cv2Kmo_gZSdH6AC"></JwPlayer>
-
             </div> */}
 
             {/* <Addsterra></Addsterra> */}
 
 
-            <div className="w-full shadow">
-                {/* <img src={bannerImage} alt="" className='object-cover w-full' /> */}
-                <JwPlayer currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1i0rsjnSAjD3NVCEi5cv2Kmo_gZSdH6AC"></JwPlayer>
-            </div>
+            <JwPlayer currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1i0rsjnSAjD3NVCEi5cv2Kmo_gZSdH6AC"></JwPlayer>
 
-            {/* <div className="w-full shadow">
-                <UseRefPlayer></UseRefPlayer>
-            </div> */}
-
-            {/* <div className="w-full shadow">
-                <UseRefPlayer currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1i0rsjnSAjD3NVCEi5cv2Kmo_gZSdH6AC"></UseRefPlayer>
-            </div> */}
 
 
             <div className="action__btn my-5">
@@ -158,10 +148,8 @@ const Movie = () => {
                     (<p>No data found</p>)
             }
 
-
-
-
-
+            <SugestedShow props={"Sugested Movies"}></SugestedShow>
+            <Populers props={"Recommendations"}></Populers>
 
 
         </div>

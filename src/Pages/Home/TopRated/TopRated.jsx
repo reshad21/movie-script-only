@@ -7,11 +7,14 @@ import { Navigation } from "swiper";
 import 'swiper/css';
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import CardSkeleton from '../../../Shared/CardSkelton/CardSkeleton';
 
-const TopRated = () => {
+const TopRated = (props) => {
+    const { props: topRatedMovies } = props;
+
     const swiperRef = useRef();
-    // const API_KEY = process.env.REACT_APP_apiKey;
+
     const { data: toprateds = [], isLoading } = useQuery({
         queryKey: ['toprateds'],
         queryFn: async () => {
@@ -20,8 +23,6 @@ const TopRated = () => {
             return data.results;
         }
     })
-
-    // console.log(toprateds);
 
     if (isLoading) {
         return (
@@ -35,49 +36,58 @@ const TopRated = () => {
         )
     }
     return (
-        <div className='relative'>
-            <div className="title flex items-center gap-1 align-middle">
-                <h1 className='my-4 text-2xl inline-block rounded p-2 text-slate-200'>Toprated Movies</h1>
-                <span className='text-[#e6e101] inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
-            </div>
-            <Swiper
-                modules={[Navigation]}
-                // navigation={true}
-                // style={{ marginLeft: '40px', marginRight: '40px', position: 'unset' }}
-                onBeforeInit={(swiper) => {
-                    swiperRef.current = swiper;
-                }}
-                spaceBetween={20}
-                slidesPerView={5}
-                breakpoints={{
-                    0: {
-                        slidesPerView: 2,
-                        spaceBetween: 5,
-                    },
-                    480: {
-                        slidesPerView: 3,
-                        spaceBetween: 10,
-                    },
-                    640: {
-                        slidesPerView: 3,
-                        spaceBetween: 15,
-                    },
-                    1000: {
-                        slidesPerView: 6,
-                        spaceBetween: 20,
-                    },
-                }}
-            >
-                {
-                    toprateds?.map(toprated => <SwiperSlide><Rated toprated={toprated} key={toprated.id}></Rated></SwiperSlide>)
-                }
-            </Swiper>
-            <div className='customize__navigation absolute top-7 right-3 text-3xl font-light text-[#e6e101]'>
-                <button onClick={() => swiperRef.current?.slidePrev()}><FaRegCaretSquareLeft /></button>
-                <button onClick={() => swiperRef.current?.slideNext()}><FaRegCaretSquareRight /></button>
-            </div>
+        <>
+            <div className="mb-4 relative w-full">
 
-        </div>
+                <div className="title flex items-center gap-1 align-middle">
+                    <h1 className='my-4 text-2xl inline-block rounded p-2 text-slate-200'>{topRatedMovies}</h1>
+                    <span className='text-[#e6e101] inline-block text-2xl mt-[5px]'><FaAngleDoubleRight /></span>
+                </div>
+
+                <Swiper
+                    modules={[Navigation]}
+                    onBeforeInit={(swiper) => {
+                        swiperRef.current = swiper;
+                    }}
+                    className="my-swiper"
+                    spaceBetween={20}
+                    slidesPerView={6}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 2,
+                            spaceBetween: 5,
+                        },
+                        480: {
+                            slidesPerView: 3,
+                            spaceBetween: 10,
+                        },
+                        640: {
+                            slidesPerView: 3,
+                            spaceBetween: 15,
+                        },
+                        1000: {
+                            slidesPerView: 6,
+                            spaceBetween: 20,
+                        },
+                    }}
+                >
+                    {
+
+
+                        toprateds?.map(toprated => <SwiperSlide><Rated toprated={toprated} key={toprated.id}></Rated></SwiperSlide>)
+
+
+
+                    }
+                </Swiper>
+
+                <div className='customize__navigation absolute top-7 right-3 text-3xl font-light text-[#e6e101]'>
+                    <button onClick={() => swiperRef.current?.slidePrev()}><FaRegCaretSquareLeft /></button>
+                    <button onClick={() => swiperRef.current?.slideNext()}><FaRegCaretSquareRight /></button>
+                </div>
+
+            </div>
+        </>
     );
 };
 

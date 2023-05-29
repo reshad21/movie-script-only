@@ -23,11 +23,20 @@ const AuthProvider = ({ children }) => {
     }, []);
 
 
+    const [similar, setSimilar] = useState([]);
+    useEffect(() => {
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=60328c60edaea9ec7115178b6e8c7a3a`)
+            .then((res) => res.json())
+            .then((data) => setSimilar(data))
+    }, [])
+
+
     const authInfo = {
         collections,
         data,
         loading,
-        setLoading
+        setLoading,
+        similar
     }
 
     return (

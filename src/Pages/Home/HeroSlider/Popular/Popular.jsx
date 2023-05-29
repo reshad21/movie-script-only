@@ -5,7 +5,6 @@ import './Popular.css';
 import { FaStar, FaYoutube } from 'react-icons/fa';
 import download from '../../../../assets/download.png';
 const Popular = ({ popular }) => {
-    // const imgUrl = 'https://image.tmdb.org/t/p/w500';
     return (
         <div>
             <div className="shadow-xl border-2 rounded-[6px] border-slate-700 overflow-hidden">
