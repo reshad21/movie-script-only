@@ -62,7 +62,7 @@ const JwPlayer = ({ currentMovieDetail, videoId }) => {
                     margin: "0 auto",
                     border: "5px solid #13005A",
                     objectFit: "cover",
-                    position: "relative"
+                    position: "center"
                 }}
                 data-setup="{ }"
             >

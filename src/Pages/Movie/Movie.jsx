@@ -7,7 +7,7 @@ import demo from '../../assets/banner.jpg';
 // import Addsterra from '../Addsterra/Addsterra';
 import Populers from '../Home/HeroSlider/Populers';
 import SugestedShow from '../Home/Suggested/SugestedShow';
-import JwPlayer from './JwPlayer';
+import CustomVideo from './CustomVideo';
 import './Movie.css';
 
 const Movie = () => {
@@ -45,12 +45,12 @@ const Movie = () => {
             backgroundRepeat: "no-repeat",
             // backgroundSize: '100% 100%',
             backgroundSize: 'cover',
-            backgroundPosition: '50% 100%',
+            backgroundPosition: '50% 50%',
             // height: "100vh",
             objectFit: "cover"
         }}>
 
-            {/* <div className="w-full shadow" style={{
+            <div className="w-full shadow" style={{
                 backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(${posterImage})`,
                 backgroundRepeat: "no-repeat",
                 // backgroundSize: '100% 100%',
@@ -60,12 +60,12 @@ const Movie = () => {
             }}>
                 <CustomVideo currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1i0rsjnSAjD3NVCEi5cv2Kmo_gZSdH6AC"></CustomVideo>
 
-            </div> */}
+            </div>
 
             {/* <Addsterra></Addsterra> */}
 
 
-            <JwPlayer currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1i0rsjnSAjD3NVCEi5cv2Kmo_gZSdH6AC"></JwPlayer>
+            {/* <JwPlayer currentMovieDetail={currentMovieDetail} key={currentMovieDetail?.posterImage} videoId="1i0rsjnSAjD3NVCEi5cv2Kmo_gZSdH6AC"></JwPlayer> */}
 
 
 
